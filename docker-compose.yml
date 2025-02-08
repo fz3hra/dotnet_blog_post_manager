@@ -1,0 +1,18 @@
+﻿services:
+  dotnet_blog_post_manager:
+    image: dotnet_blog_post_manager
+    build:
+      context: .
+      dockerfile: dotnet_blog_post_manager/Dockerfile
+
+  post.api:
+    image: post.api
+    build:
+      context: .
+      dockerfile: Post.API/Dockerfile
+
+  user.api:
+    image: user.api
+    build:
+      context: .
+      dockerfile: User.API/Dockerfile
