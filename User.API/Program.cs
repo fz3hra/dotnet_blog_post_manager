@@ -9,7 +9,10 @@ using User.API.Data;
 using User.API.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(8081);
+});
 var connectionString = builder.Configuration.GetConnectionString("UserDbConnectionString");
 builder.Services.AddDbContext<UserDbContext>(options => options.UseSqlServer(connectionString));
 
@@ -67,7 +70,9 @@ using (var scope = app.Services.CreateScope())
 {
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<UserDbContext>();
+    context.Database.Migrate();
     try
     {
         // Create USER role if it doesn't exist

@@ -6,9 +6,13 @@ using Post.API.Configurations;
 using Post.API.Contracts;
 using Post.API.Data;
 using Post.API.Repository;
+using Post.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(8080);
+});
 // Database Configuration
 var connectionString = builder.Configuration.GetConnectionString("UserDbConnectionString");
 builder.Services.AddDbContext<PostDbContext>(options => 
@@ -58,21 +62,27 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Initialize Database (optional)
+// // Initialize Database (optional)
+// using (var scope = app.Services.CreateScope())
+// {
+//     var dbContext = scope.ServiceProvider.GetRequiredService<PostDbContext>();
+//     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+//
+//     try
+//     {
+//         dbContext.Database.Migrate();
+//         logger.LogInformation("Database migrated successfully");
+//     }
+//     catch (Exception ex)
+//     {
+//         logger.LogError(ex, "An error occurred while migrating the database");
+//     }
+// }
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<PostDbContext>();
-    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-
-    try
-    {
-        dbContext.Database.Migrate();
-        logger.LogInformation("Database migrated successfully");
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "An error occurred while migrating the database");
-    }
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<PostDbContext>();
+    context.Database.Migrate();
 }
 
 // Middleware Pipeline

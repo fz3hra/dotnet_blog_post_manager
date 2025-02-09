@@ -9,4 +9,5 @@ public class GetPostDto : BasePostDto
     public string CreatedBy { get; set; }
     public PostStatus Status { get; set; }
     public int ViewCount { get; set; }
+    public bool IsPublished { get; set; } = false;
 }
