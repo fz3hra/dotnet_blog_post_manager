@@ -1,0 +1,36 @@
+name: Deploy DocFx
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Load env variables
+        run: |
+          echo "DB_PASSWORD=$(cat .env | grep DB_PASSWORD | cut -d '=' -f2)" >> $GITHUB_ENV
+          echo "GITHUB_TOKEN=$(cat .env | grep GITHUB_TOKEN | cut -d '=' -f2)" >> $GITHUB_ENV
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install DocFx
+        run: dotnet tool update -g docfx
+
+      - name: Build Project
+        run: dotnet build
+
+      - name: Generate Documentation
+        run: |
+          docfx metadata
+          docfx build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ env.GITHUB_TOKEN }}
+          publish_dir: _site
