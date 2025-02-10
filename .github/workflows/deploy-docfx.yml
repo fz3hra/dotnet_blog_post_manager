@@ -2,16 +2,12 @@ name: Deploy DocFx
 on:
   push:
     branches: [ main ]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Load env variables
-        run: |
-          echo "DB_PASSWORD=$(cat .env | grep DB_PASSWORD | cut -d '=' -f2)" >> $GITHUB_ENV
-          echo "GITHUB_TOKEN=$(cat .env | grep GITHUB_TOKEN | cut -d '=' -f2)" >> $GITHUB_ENV
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -32,5 +28,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ env.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: fz3hra/server_blog_post_manager.io
+          publish_branch: gh-pages
           publish_dir: _site
