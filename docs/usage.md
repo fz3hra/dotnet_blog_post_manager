@@ -1,8 +1,8 @@
-# API Usage Documentation
+# Auth and Post API Usage Documentation
 
 ## Introduction
 
-This document provides a structured overview of the **Auth API** and **Post API** for user authentication and managing posts. It includes endpoint details, request and response formats, required headers, and potential errors.
+The **Post API** provides functionalities to manage posts in a database. The repository pattern is used to encapsulate data access logic. This document describes the API endpoints, their expected requests, and responses.
 
 ## Dependencies
 
@@ -10,19 +10,17 @@ This API uses the following dependencies:
 - `AutoMapper` for object mapping
 - `Entity Framework Core` for database operations
 - `ILogger` for logging
-- `System.IdentityModel.Tokens.Jwt` for token handling
-- `Microsoft.AspNetCore.Identity` for user management
 
 ## Authorization and Headers
 
 All API endpoints require the following headers:
 
-- `Authorization`: `Bearer <token>` - A valid Bearer token for authentication (for secured endpoints).
+- `Authorization`: `Bearer <token>` - A valid Bearer token for authentication.
 - `Content-Type`: `application/json` - Indicates that the request body is in JSON format.
 
 ---
 
-## Auth API Endpoints
+## Authentication API
 
 ### 1. Register a User
 
@@ -41,39 +39,25 @@ POST /api/Auth/register
 **Request Body:**
 ```json
 {
-  "email": "string",
-  "password": "string",
-  "firstName": "string",
-  "lastName": "string",
-  "userName": "string"
+  "email": "jdoe@gmail.com",
+  "password": "Admin123!",
+  "firstName": "John",
+  "lastName": "Doe",
+  "userName": "jdoe"
 }
 ```
 
 **Response:**
-- **200 OK:**
 ```json
 {
-  "message": "Registration successful."
-}
-```
-- **400 Bad Request:**
-```json
-{
-  "errors": {
-    "email": "Email is already registered."
-  }
-}
-```
-- **500 Internal Server Error:**
-```json
-{
-  "title": "An error occurred while processing request",
-  "status": 500,
-  "detail": "Error message"
+  "success": true,
+  "message": "User registered successfully"
 }
 ```
 
----
+**Error Responses:**
+- `400 Bad Request`: Missing or invalid fields.
+- `409 Conflict`: Email already exists.
 
 ### 2. Login a User
 
@@ -92,37 +76,26 @@ POST /api/Auth/login
 **Request Body:**
 ```json
 {
-  "email": "string",
-  "password": "string"
+  "email": "jdoe@gmail.com",
+  "password": "Admin123!"
 }
 ```
 
 **Response:**
-- **200 OK:**
 ```json
 {
-  "userId": "string",
-  "token": "string"
+  "userId": "e3a9df31-90ce-4a2f-93a7-ceafc7401131",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 }
 ```
-- **401 Unauthorized:**
-```json
-{
-  "message": "Invalid credentials."
-}
-```
-- **500 Internal Server Error:**
-```json
-{
-  "title": "An error occurred while processing request",
-  "status": 500,
-  "detail": "Error message"
-}
-```
+
+**Error Responses:**
+- `401 Unauthorized`: Incorrect credentials.
+- `500 Internal Server Error`: Login service unavailable.
 
 ---
 
-## Post API Endpoints
+## Post API
 
 ### 1. Create a Post
 
@@ -142,54 +115,42 @@ POST /api/posts
 **Request Body:**
 ```json
 {
-  "title": "string",
-  "description": "string",
-  "tags": ["string"],
-  "featuredImageUrl": "string",
-  "excerpt": "string",
+  "title": "Sample Post",
+  "description": "This is a test post.",
+  "tags": ["tech", "blog"],
+  "featuredImageUrl": "https://example.com/image.jpg",
+  "excerpt": "Short description of the post.",
   "isPublished": true
 }
 ```
 
 **Response:**
-- **200 OK:**
 ```json
 {
   "success": true,
   "message": "Post created successfully",
   "post": {
-    "title": "string",
-    "description": "string",
-    "tags": ["string"],
-    "featuredImageUrl": "string",
-    "excerpt": "string",
-    "id": 0,
+    "title": "Sample Post",
+    "description": "This is a test post.",
+    "tags": ["tech", "blog"],
+    "featuredImageUrl": "https://example.com/image.jpg",
+    "excerpt": "Short description of the post.",
+    "id": 1,
     "createdAt": "2025-02-10T08:03:19.883Z",
-    "createdBy": "string",
+    "createdBy": "jdoe",
     "status": 0,
     "viewCount": 0,
     "isPublished": true,
     "lastModifiedAt": "2025-02-10T08:03:19.883Z",
-    "lastModifiedBy": "string"
+    "lastModifiedBy": "jdoe"
   }
 }
 ```
-- **401 Unauthorized:**
-```json
-{
-  "success": false,
-  "message": "User not authenticated"
-}
-```
-- **500 Internal Server Error:**
-```json
-{
-  "success": false,
-  "message": "An error occurred while creating the post."
-}
-```
 
----
+**Error Responses:**
+- `400 Bad Request`: Missing required fields.
+- `401 Unauthorized`: Invalid or missing Bearer token.
+- `500 Internal Server Error`: Database issue.
 
 ### 2. Get All Posts
 
@@ -206,50 +167,26 @@ GET /api/posts
 }
 ```
 
-**Query Parameters:**
-- `status` (optional): Integer (0, 1, 2)
-
 **Response:**
-- **200 OK:**
 ```json
 {
   "success": true,
-  "message": "Posts retrieved successfully.",
+  "message": "Posts retrieved successfully",
   "posts": [
     {
-      "title": "string",
-      "description": "string",
-      "tags": ["string"],
-      "featuredImageUrl": "string",
-      "excerpt": "string",
-      "id": 0,
-      "createdAt": "2025-02-10T08:04:14.195Z",
-      "createdBy": "string",
+      "id": 1,
+      "title": "Sample Post",
+      "description": "This is a test post.",
+      "tags": ["tech", "blog"],
+      "createdAt": "2025-02-10T08:03:19.883Z",
+      "createdBy": "jdoe",
       "status": 0,
-      "viewCount": 0,
-      "isPublished": true,
-      "lastModifiedAt": "2025-02-10T08:04:14.195Z",
-      "lastModifiedBy": "string"
+      "viewCount": 10,
+      "isPublished": true
     }
   ]
 }
 ```
-- **401 Unauthorized:**
-```json
-{
-  "success": false,
-  "message": "User not authenticated"
-}
-```
-- **500 Internal Server Error:**
-```json
-{
-  "success": false,
-  "message": "An error occurred while retrieving posts."
-}
-```
-
----
 
 ### 3. Get Post by ID
 
@@ -258,52 +195,62 @@ GET /api/posts
 GET /api/posts/{id}
 ```
 
-**Headers:**
-```json
-{
-  "Authorization": "Bearer <token>",
-  "Content-Type": "application/json"
-}
-```
-
-**Path Parameters:**
-- `id` (required): Integer, the unique identifier of the post.
-
 **Response:**
-- **200 OK:**
 ```json
 {
   "success": true,
-  "message": "Post retrieved successfully.",
+  "message": "Post retrieved successfully",
   "post": {
-    "title": "string",
-    "description": "string",
-    "tags": ["string"],
-    "featuredImageUrl": "string",
-    "excerpt": "string",
-    "id": 0,
-    "createdAt": "2025-02-10T08:04:35.814Z",
-    "createdBy": "string",
+    "id": 1,
+    "title": "Sample Post",
+    "description": "This is a test post.",
+    "tags": ["tech", "blog"],
+    "createdAt": "2025-02-10T08:03:19.883Z",
+    "createdBy": "jdoe",
     "status": 0,
-    "viewCount": 0,
-    "isPublished": true,
-    "lastModifiedAt": "2025-02-10T08:04:35.814Z",
-    "lastModifiedBy": "string"
+    "viewCount": 10,
+    "isPublished": true
   }
 }
 ```
-- **404 Not Found:**
+
+### 4. Update a Post
+
+**Endpoint:**
+```http
+PUT /api/posts/{id}
+```
+
+**Request Body:**
 ```json
 {
-  "success": false,
-  "message": "Post not found."
+  "title": "Updated Post Title",
+  "description": "Updated description.",
+  "tags": ["updated", "blog"],
+  "isPublished": true
 }
 ```
-- **500 Internal Server Error:**
+
+**Response:**
 ```json
 {
-  "success": false,
-  "message": "An error occurred while retrieving the post."
+  "success": true,
+  "message": "Post updated successfully"
+}
+```
+
+### 5. Delete a Post
+
+**Endpoint:**
+```http
+DELETE /api/posts/{id}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "Post deleted successfully"
 }
 ```
 
@@ -319,11 +266,6 @@ All error responses follow this format:
 }
 ```
 
-## Logging and Debugging
-
-- Errors and exceptions are logged using `ILogger`.
-- Logs can be retrieved from the application logs for debugging issues.
-
 ## Conclusion
 
-This document provides a structured overview of the Auth and Post APIs, including endpoints, request and response formats, and error handling. Ensure that API clients handle errors properly and use correct authorization mechanisms.
+This document provides a structured overview of the **Post API** and **Authentication API**, including endpoints, request and response formats, and logging details. Ensure that API clients handle errors properly and use correct authorization mechanisms.
