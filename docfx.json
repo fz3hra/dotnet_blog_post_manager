@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "Post.API",
+          "files": ["**/*.csproj"]
+        },
+        {
+          "src": "User.API",
+          "files": ["**/*.csproj"]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["api/**/*.yml", "*.md", "toc.yml"],
+        "exclude": ["_site/**"]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "custom-theme"
+    ],
+    "globalMetadata": {
+      "_appName": "back_blog_post_manager",
+      "_appTitle": "back_blog_post_manager",
+      "_enableSearch": true,
+      "pdf": true,
+      "_baseUrl": "https://fz3hra.github.io/server_blog_post_manager.io"
+    }
+  }
+}

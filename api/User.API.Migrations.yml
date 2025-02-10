@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Migrations
+  commentId: N:User.API.Migrations
+  id: User.API.Migrations
+  children:
+  - User.API.Migrations.test
+  - User.API.Migrations.userapi
+  langs:
+  - csharp
+  - vb
+  name: User.API.Migrations
+  nameWithType: User.API.Migrations
+  fullName: User.API.Migrations
+  type: Namespace
+  assemblies:
+  - User.API
+references:
+- uid: User.API.Migrations.userapi
+  commentId: T:User.API.Migrations.userapi
+  href: User.API.Migrations.userapi.html
+  name: userapi
+  nameWithType: userapi
+  fullName: User.API.Migrations.userapi
+- uid: User.API.Migrations.test
+  commentId: T:User.API.Migrations.test
+  href: User.API.Migrations.test.html
+  name: test
+  nameWithType: test
+  fullName: User.API.Migrations.test

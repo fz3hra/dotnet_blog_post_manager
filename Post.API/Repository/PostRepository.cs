@@ -1,5 +1,4 @@
 using AutoMapper;
-using Post.API.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Post.API.Contracts;
 using Post.API.Data;
@@ -7,19 +6,34 @@ using Post.API.ModelDtos;
 
 namespace Post.API.Repository;
 
+/// <summary>
+/// Repository implementation for managing posts.
+/// </summary>
 public class PostRepository : IPostRepository
 {
     private readonly PostDbContext _context;
     private readonly IMapper _mapper;
     private readonly ILogger<PostRepository> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PostRepository"/> class.
+    /// </summary>
+    /// <param name="context">The database context.</param>
+    /// <param name="mapper">The mapper instance for DTO mapping.</param>
+    /// <param name="logger">The logger instance for logging operations.</param>
     public PostRepository(PostDbContext context, IMapper mapper, ILogger<PostRepository> logger)
     {
-        this._context = context;
-        this._mapper = mapper;
-        this._logger = logger;
+        _context = context;
+        _mapper = mapper;
+        _logger = logger;
     }
 
+    /// <summary>
+    /// Creates a new post in the database.
+    /// </summary>
+    /// <param name="postDto">The data for the new post.</param>
+    /// <param name="userId">The ID of the user creating the post.</param>
+    /// <returns>A response containing the created post.</returns>
     public async Task<PostResponse> CreatePost(CreatePostDto postDto, string userId)
     {
         try
@@ -45,12 +59,17 @@ public class PostRepository : IPostRepository
             return new PostResponse
             {
                 Success = false,
-                Message = $"Failed to create post: {ex.Message}" // 🔍 Show actual error
+                Message = $"Failed to create post: {ex.Message}"
             };
         }
-
     }
 
+    /// <summary>
+    /// Retrieves all posts, optionally filtered by user and/or status.
+    /// </summary>
+    /// <param name="userId">The ID of the user whose posts to retrieve (optional).</param>
+    /// <param name="status">The status of posts to filter by (optional).</param>
+    /// <returns>A response containing the list of posts.</returns>
     public async Task<PostsResponse> GetAllPosts(string? userId = null, PostStatus? status = null)
     {
         try
@@ -87,12 +106,16 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Retrieves a post by its ID.
+    /// </summary>
+    /// <param name="id">The ID of the post to retrieve.</param>
+    /// <returns>A response containing the post details.</returns>
     public async Task<PostResponse> GetPostById(int id)
     {
         try
         {
-            var post = await _context.Posts
-                .FirstOrDefaultAsync(p => p.Id == id);
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
 
             if (post == null)
             {
@@ -121,12 +144,18 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Updates an existing post.
+    /// </summary>
+    /// <param name="id">The ID of the post to update.</param>
+    /// <param name="postDto">The data to update the post with.</param>
+    /// <param name="userId">The ID of the user updating the post.</param>
+    /// <returns>A response containing the updated post.</returns>
     public async Task<PostResponse> UpdatePost(int id, UpdatePostDto postDto, string userId)
     {
         try
         {
-            var post = await _context.Posts
-                .FirstOrDefaultAsync(p => p.Id == id);
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
 
             if (post == null)
             {
@@ -172,12 +201,17 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Deletes a post by its ID.
+    /// </summary>
+    /// <param name="id">The ID of the post to delete.</param>
+    /// <param name="userId">The ID of the user deleting the post.</param>
+    /// <returns>A response indicating the deletion status.</returns>
     public async Task<BaseResponse> DeletePost(int id, string userId)
     {
         try
         {
-            var post = await _context.Posts
-                .FirstOrDefaultAsync(p => p.Id == id);
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == id);
 
             if (post == null)
             {
@@ -217,6 +251,11 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Retrieves posts associated with a specific tag.
+    /// </summary>
+    /// <param name="tag">The tag to filter posts by.</param>
+    /// <returns>A response containing the posts with the specified tag.</returns>
     public async Task<PostsResponse> GetPostsByTag(string tag)
     {
         try
@@ -243,6 +282,11 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Increments the view count for a specific post.
+    /// </summary>
+    /// <param name="id">The ID of the post.</param>
+    /// <returns>A boolean indicating whether the operation succeeded.</returns>
     public async Task<bool> IncrementViewCount(int id)
     {
         try
@@ -261,6 +305,11 @@ public class PostRepository : IPostRepository
         }
     }
 
+    /// <summary>
+    /// Searches posts by a term.
+    /// </summary>
+    /// <param name="searchTerm">The term to search posts by.</param>
+    /// <returns>A task representing the asynchronous operation.</returns>
     public Task<PostsResponse> SearchPosts(string searchTerm)
     {
         throw new NotImplementedException();

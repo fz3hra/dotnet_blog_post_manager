@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Data.PostStatus
+  commentId: T:Post.API.Data.PostStatus
+  id: PostStatus
+  parent: Post.API.Data
+  children:
+  - Post.API.Data.PostStatus.Archived
+  - Post.API.Data.PostStatus.Draft
+  - Post.API.Data.PostStatus.Published
+  langs:
+  - csharp
+  - vb
+  name: PostStatus
+  nameWithType: PostStatus
+  fullName: Post.API.Data.PostStatus
+  type: Enum
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: PostStatus
+    path: Post.API/Data/Post.cs
+    startLine: 41
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public enum PostStatus
+    content.vb: Public Enum PostStatus
+- uid: Post.API.Data.PostStatus.Draft
+  commentId: F:Post.API.Data.PostStatus.Draft
+  id: Draft
+  parent: Post.API.Data.PostStatus
+  langs:
+  - csharp
+  - vb
+  name: Draft
+  nameWithType: PostStatus.Draft
+  fullName: Post.API.Data.PostStatus.Draft
+  type: Field
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Draft
+    path: Post.API/Data/Post.cs
+    startLine: 43
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: Draft = 0
+    return:
+      type: Post.API.Data.PostStatus
+- uid: Post.API.Data.PostStatus.Published
+  commentId: F:Post.API.Data.PostStatus.Published
+  id: Published
+  parent: Post.API.Data.PostStatus
+  langs:
+  - csharp
+  - vb
+  name: Published
+  nameWithType: PostStatus.Published
+  fullName: Post.API.Data.PostStatus.Published
+  type: Field
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Published
+    path: Post.API/Data/Post.cs
+    startLine: 44
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: Published = 1
+    return:
+      type: Post.API.Data.PostStatus
+- uid: Post.API.Data.PostStatus.Archived
+  commentId: F:Post.API.Data.PostStatus.Archived
+  id: Archived
+  parent: Post.API.Data.PostStatus
+  langs:
+  - csharp
+  - vb
+  name: Archived
+  nameWithType: PostStatus.Archived
+  fullName: Post.API.Data.PostStatus.Archived
+  type: Field
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Archived
+    path: Post.API/Data/Post.cs
+    startLine: 45
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: Archived = 2
+    return:
+      type: Post.API.Data.PostStatus
+references:
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  href: Post.html
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+- uid: Post.API.Data.PostStatus
+  commentId: T:Post.API.Data.PostStatus
+  parent: Post.API.Data
+  href: Post.API.Data.PostStatus.html
+  name: PostStatus
+  nameWithType: PostStatus
+  fullName: Post.API.Data.PostStatus

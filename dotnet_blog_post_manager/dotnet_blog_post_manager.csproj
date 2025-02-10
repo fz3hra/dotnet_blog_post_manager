@@ -17,4 +17,11 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="docs\**\*.md" />
+        <Content Include="_site\**\*.html" />
+        <None Include="docfx.json" />
+    </ItemGroup>
+
 </Project>

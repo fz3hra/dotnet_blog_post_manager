@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Migrations
+  commentId: N:Post.API.Migrations
+  id: Post.API.Migrations
+  children:
+  - Post.API.Migrations.InitialCreate
+  - Post.API.Migrations.UpdatePostModel
+  - Post.API.Migrations.UpdateUserModel
+  - Post.API.Migrations.postsapi
+  - Post.API.Migrations.test
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Migrations
+  nameWithType: Post.API.Migrations
+  fullName: Post.API.Migrations
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Migrations.postsapi
+  commentId: T:Post.API.Migrations.postsapi
+  href: Post.API.Migrations.postsapi.html
+  name: postsapi
+  nameWithType: postsapi
+  fullName: Post.API.Migrations.postsapi
+- uid: Post.API.Migrations.InitialCreate
+  commentId: T:Post.API.Migrations.InitialCreate
+  href: Post.API.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: Post.API.Migrations.InitialCreate
+- uid: Post.API.Migrations.test
+  commentId: T:Post.API.Migrations.test
+  href: Post.API.Migrations.test.html
+  name: test
+  nameWithType: test
+  fullName: Post.API.Migrations.test
+- uid: Post.API.Migrations.UpdatePostModel
+  commentId: T:Post.API.Migrations.UpdatePostModel
+  href: Post.API.Migrations.UpdatePostModel.html
+  name: UpdatePostModel
+  nameWithType: UpdatePostModel
+  fullName: Post.API.Migrations.UpdatePostModel
+- uid: Post.API.Migrations.UpdateUserModel
+  commentId: T:Post.API.Migrations.UpdateUserModel
+  href: Post.API.Migrations.UpdateUserModel.html
+  name: UpdateUserModel
+  nameWithType: UpdateUserModel
+  fullName: Post.API.Migrations.UpdateUserModel

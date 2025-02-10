@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Contracts
+  commentId: N:Post.API.Contracts
+  id: Post.API.Contracts
+  children:
+  - Post.API.Contracts.IGenericManager`1
+  - Post.API.Contracts.IPostRepository
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Contracts
+  nameWithType: Post.API.Contracts
+  fullName: Post.API.Contracts
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Contracts.IGenericManager`1
+  commentId: T:Post.API.Contracts.IGenericManager`1
+  href: Post.API.Contracts.IGenericManager-1.html
+  name: IGenericManager<T>
+  nameWithType: IGenericManager<T>
+  fullName: Post.API.Contracts.IGenericManager<T>
+  nameWithType.vb: IGenericManager(Of T)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T)
+  name.vb: IGenericManager(Of T)
+  spec.csharp:
+  - uid: Post.API.Contracts.IGenericManager`1
+    name: IGenericManager
+    href: Post.API.Contracts.IGenericManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Post.API.Contracts.IGenericManager`1
+    name: IGenericManager
+    href: Post.API.Contracts.IGenericManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Post.API.Contracts.IPostRepository
+  commentId: T:Post.API.Contracts.IPostRepository
+  parent: Post.API.Contracts
+  href: Post.API.Contracts.IPostRepository.html
+  name: IPostRepository
+  nameWithType: IPostRepository
+  fullName: Post.API.Contracts.IPostRepository
+- uid: Post.API.Contracts
+  commentId: N:Post.API.Contracts
+  href: Post.html
+  name: Post.API.Contracts
+  nameWithType: Post.API.Contracts
+  fullName: Post.API.Contracts
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html

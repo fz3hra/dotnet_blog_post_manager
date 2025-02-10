@@ -1,18 +1,59 @@
-﻿services:
-  dotnet_blog_post_manager:
-    image: dotnet_blog_post_manager
-    build:
-      context: .
-      dockerfile: dotnet_blog_post_manager/Dockerfile
+﻿version: "3.8"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${DB_PASSWORD}
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    networks:
+      - app-network
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "${DB_PASSWORD}" -Q "SELECT 1" || exit 1
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
 
   post.api:
     image: post.api
     build:
       context: .
       dockerfile: Post.API/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__UserDbConnectionString=Server=sqlserver;Database=BlogDb;User ID=sa;Password=${DB_PASSWORD};TrustServerCertificate=True;MultipleActiveResultSets=true
+    env_file:
+      - .env
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - app-network
 
   user.api:
     image: user.api
     build:
       context: .
       dockerfile: User.API/Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__UserDbConnectionString=Server=sqlserver;Database=UserDb;User ID=sa;Password=${DB_PASSWORD};TrustServerCertificate=True;MultipleActiveResultSets=true
+    env_file:
+      - .env
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

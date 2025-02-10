@@ -1,0 +1,545 @@
+{
+  "source_base_path": "/Users/fz3hra/Desktop/code/fintrellis/dotnet_blog_post_manager",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Configurations.MapperConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Configurations.MapperConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Configurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Configurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Contracts.IGenericManager-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Contracts.IGenericManager-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Contracts.IPostRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Contracts.IPostRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Controllers.PostController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Controllers.PostController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.Configuration.PostConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.Configuration.PostConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.Post.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.Post.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.PostDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.PostDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.PostStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.PostStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.InitialCreate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.UpdatePostModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.UpdatePostModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.UpdateUserModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.UpdateUserModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.postsapi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.postsapi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.test.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.BasePostDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.BasePostDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.BaseResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.BaseResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.CreatePostDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.CreatePostDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.GetPostDetailDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.GetPostDetailDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.GetPostDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.GetPostDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.PostResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.PostResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.PostsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.PostsResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.UpdatePostDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.UpdatePostDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.ModelDtos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.ModelDtos.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Repository.PostRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Repository.PostRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Post.API.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Post.API.Repository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Configurations.MapperConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Configurations.MapperConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Configurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Configurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Contracts.IAuthManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Contracts.IAuthManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Contracts.IGenericManager-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Contracts.IGenericManager-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Controllers.AuthController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Data.AuthResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Data.AuthResponseDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Data.UserApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Data.UserApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Data.UserDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Data.UserDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Migrations.test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Migrations.test.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Migrations.userapi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Migrations.userapi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Migrations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.ModelDtos.AuthDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.ModelDtos.AuthDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.ModelDtos.RegisterDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.ModelDtos.RegisterDto.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.ModelDtos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.ModelDtos.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Repository.AuthRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Repository.AuthRepository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/User.API.Repository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/User.API.Repository.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

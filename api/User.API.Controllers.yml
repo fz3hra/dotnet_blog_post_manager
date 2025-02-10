@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Controllers
+  commentId: N:User.API.Controllers
+  id: User.API.Controllers
+  children:
+  - User.API.Controllers.AuthController
+  langs:
+  - csharp
+  - vb
+  name: User.API.Controllers
+  nameWithType: User.API.Controllers
+  fullName: User.API.Controllers
+  type: Namespace
+  assemblies:
+  - User.API
+references:
+- uid: User.API.Controllers.AuthController
+  commentId: T:User.API.Controllers.AuthController
+  href: User.API.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: User.API.Controllers.AuthController

@@ -7,6 +7,9 @@ using Post.API.ModelDtos;
 
 namespace Post.API.Controllers;
 
+/// <summary>
+/// Controller to manage posts.
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 [Authorize]
@@ -15,12 +18,22 @@ public class PostController : ControllerBase
     private readonly IPostRepository _postRepository;
     private readonly ILogger<PostController> _logger;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PostController"/> class.
+    /// </summary>
+    /// <param name="postRepository">The repository for managing posts.</param>
+    /// <param name="logger">The logger instance for logging information.</param>
     public PostController(IPostRepository postRepository, ILogger<PostController> logger)
     {
         _postRepository = postRepository;
         _logger = logger;
     }
 
+    /// <summary>
+    /// Creates a new post.
+    /// </summary>
+    /// <param name="postDto">The post data transfer object.</param>
+    /// <returns>The response containing the created post.</returns>
     [HttpPost]
     public async Task<ActionResult<PostResponse>> CreatePost([FromBody] CreatePostDto postDto)
     {
@@ -53,6 +66,11 @@ public class PostController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Retrieves all posts for the authenticated user.
+    /// </summary>
+    /// <param name="status">The optional status filter for the posts.</param>
+    /// <returns>A list of posts matching the criteria.</returns>
     [HttpGet]
     public async Task<ActionResult<PostsResponse>> GetAllPosts([FromQuery] PostStatus? status)
     {
@@ -73,6 +91,11 @@ public class PostController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Retrieves a specific post by its ID.
+    /// </summary>
+    /// <param name="id">The ID of the post to retrieve.</param>
+    /// <returns>The requested post, if found.</returns>
     [HttpGet("{id}")]
     public async Task<ActionResult<PostResponse>> GetPost(int id)
     {
@@ -96,6 +119,12 @@ public class PostController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Updates an existing post.
+    /// </summary>
+    /// <param name="id">The ID of the post to update.</param>
+    /// <param name="postDto">The updated post data.</param>
+    /// <returns>The response containing the updated post.</returns>
     [HttpPut("{id}")]
     public async Task<ActionResult<PostResponse>> UpdatePost(int id, [FromBody] UpdatePostDto postDto)
     {
@@ -129,6 +158,11 @@ public class PostController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Deletes a post.
+    /// </summary>
+    /// <param name="id">The ID of the post to delete.</param>
+    /// <returns>The response indicating the deletion status.</returns>
     [HttpDelete("{id}")]
     public async Task<ActionResult<BaseResponse>> DeletePost(int id)
     {

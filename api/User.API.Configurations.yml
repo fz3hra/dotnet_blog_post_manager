@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Configurations
+  commentId: N:User.API.Configurations
+  id: User.API.Configurations
+  children:
+  - User.API.Configurations.MapperConfig
+  langs:
+  - csharp
+  - vb
+  name: User.API.Configurations
+  nameWithType: User.API.Configurations
+  fullName: User.API.Configurations
+  type: Namespace
+  assemblies:
+  - User.API
+references:
+- uid: User.API.Configurations.MapperConfig
+  commentId: T:User.API.Configurations.MapperConfig
+  href: User.API.Configurations.MapperConfig.html
+  name: MapperConfig
+  nameWithType: MapperConfig
+  fullName: User.API.Configurations.MapperConfig

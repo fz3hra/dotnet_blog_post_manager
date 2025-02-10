@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Repository
+  commentId: N:Post.API.Repository
+  id: Post.API.Repository
+  children:
+  - Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Repository
+  nameWithType: Post.API.Repository
+  fullName: Post.API.Repository
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Repository.PostRepository
+  commentId: T:Post.API.Repository.PostRepository
+  href: Post.API.Repository.PostRepository.html
+  name: PostRepository
+  nameWithType: PostRepository
+  fullName: Post.API.Repository.PostRepository

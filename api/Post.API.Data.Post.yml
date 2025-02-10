@@ -1,0 +1,1079 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Data.Post
+  commentId: T:Post.API.Data.Post
+  id: Post
+  parent: Post.API.Data
+  children:
+  - Post.API.Data.Post.CreatedAt
+  - Post.API.Data.Post.CreatedBy
+  - Post.API.Data.Post.Description
+  - Post.API.Data.Post.Excerpt
+  - Post.API.Data.Post.FeaturedImageUrl
+  - Post.API.Data.Post.Id
+  - Post.API.Data.Post.IsPublished
+  - Post.API.Data.Post.LastModifiedAt
+  - Post.API.Data.Post.LastModifiedBy
+  - Post.API.Data.Post.PublishedAt
+  - Post.API.Data.Post.Status
+  - Post.API.Data.Post.Tags
+  - Post.API.Data.Post.Title
+  - Post.API.Data.Post.ViewCount
+  langs:
+  - csharp
+  - vb
+  name: Post
+  nameWithType: Post
+  fullName: Post.API.Data.Post
+  type: Class
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Post
+    path: Post.API/Data/Post.cs
+    startLine: 4
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public class Post
+    content.vb: Public Class Post
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Post.API.Data.Post.Id
+  commentId: P:Post.API.Data.Post.Id
+  id: Id
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Post.Id
+  fullName: Post.API.Data.Post.Id
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Id
+    path: Post.API/Data/Post.cs
+    startLine: 6
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Post.API.Data.Post.Id*
+- uid: Post.API.Data.Post.Title
+  commentId: P:Post.API.Data.Post.Title
+  id: Title
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: Post.Title
+  fullName: Post.API.Data.Post.Title
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Title
+    path: Post.API/Data/Post.cs
+    startLine: 8
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(200, MinimumLength = 3)]
+
+      public string Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(200, MinimumLength:=3)>
+
+      Public Property Title As String
+  overload: Post.API.Data.Post.Title*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 200
+    namedArguments:
+    - name: MinimumLength
+      type: System.Int32
+      value: 3
+- uid: Post.API.Data.Post.Description
+  commentId: P:Post.API.Data.Post.Description
+  id: Description
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Post.Description
+  fullName: Post.API.Data.Post.Description
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Description
+    path: Post.API/Data/Post.cs
+    startLine: 12
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: >-
+      [Required]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      Public Property Description As String
+  overload: Post.API.Data.Post.Description*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: Post.API.Data.Post.CreatedAt
+  commentId: P:Post.API.Data.Post.CreatedAt
+  id: CreatedAt
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: Post.CreatedAt
+  fullName: Post.API.Data.Post.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: CreatedAt
+    path: Post.API/Data/Post.cs
+    startLine: 15
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property CreatedAt As Date
+  overload: Post.API.Data.Post.CreatedAt*
+- uid: Post.API.Data.Post.CreatedBy
+  commentId: P:Post.API.Data.Post.CreatedBy
+  id: CreatedBy
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: CreatedBy
+  nameWithType: Post.CreatedBy
+  fullName: Post.API.Data.Post.CreatedBy
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: CreatedBy
+    path: Post.API/Data/Post.cs
+    startLine: 17
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: >-
+      [Required]
+
+      public string CreatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      Public Property CreatedBy As String
+  overload: Post.API.Data.Post.CreatedBy*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+- uid: Post.API.Data.Post.LastModifiedAt
+  commentId: P:Post.API.Data.Post.LastModifiedAt
+  id: LastModifiedAt
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: LastModifiedAt
+  nameWithType: Post.LastModifiedAt
+  fullName: Post.API.Data.Post.LastModifiedAt
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: LastModifiedAt
+    path: Post.API/Data/Post.cs
+    startLine: 20
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public DateTime? LastModifiedAt { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property LastModifiedAt As Date?
+  overload: Post.API.Data.Post.LastModifiedAt*
+- uid: Post.API.Data.Post.LastModifiedBy
+  commentId: P:Post.API.Data.Post.LastModifiedBy
+  id: LastModifiedBy
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: LastModifiedBy
+  nameWithType: Post.LastModifiedBy
+  fullName: Post.API.Data.Post.LastModifiedBy
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: LastModifiedBy
+    path: Post.API/Data/Post.cs
+    startLine: 22
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public string? LastModifiedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastModifiedBy As String
+  overload: Post.API.Data.Post.LastModifiedBy*
+- uid: Post.API.Data.Post.IsPublished
+  commentId: P:Post.API.Data.Post.IsPublished
+  id: IsPublished
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: IsPublished
+  nameWithType: Post.IsPublished
+  fullName: Post.API.Data.Post.IsPublished
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: IsPublished
+    path: Post.API/Data/Post.cs
+    startLine: 24
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public bool IsPublished { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPublished As Boolean
+  overload: Post.API.Data.Post.IsPublished*
+- uid: Post.API.Data.Post.PublishedAt
+  commentId: P:Post.API.Data.Post.PublishedAt
+  id: PublishedAt
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: PublishedAt
+  nameWithType: Post.PublishedAt
+  fullName: Post.API.Data.Post.PublishedAt
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: PublishedAt
+    path: Post.API/Data/Post.cs
+    startLine: 26
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public DateTime? PublishedAt { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property PublishedAt As Date?
+  overload: Post.API.Data.Post.PublishedAt*
+- uid: Post.API.Data.Post.Tags
+  commentId: P:Post.API.Data.Post.Tags
+  id: Tags
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: Post.Tags
+  fullName: Post.API.Data.Post.Tags
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Tags
+    path: Post.API/Data/Post.cs
+    startLine: 28
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: >-
+      [MaxLength(10)]
+
+      public List<string> Tags { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: >-
+      <MaxLength(10)>
+
+      Public Property Tags As List(Of String)
+  overload: Post.API.Data.Post.Tags*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.MaxLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.MaxLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 10
+- uid: Post.API.Data.Post.FeaturedImageUrl
+  commentId: P:Post.API.Data.Post.FeaturedImageUrl
+  id: FeaturedImageUrl
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: FeaturedImageUrl
+  nameWithType: Post.FeaturedImageUrl
+  fullName: Post.API.Data.Post.FeaturedImageUrl
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: FeaturedImageUrl
+    path: Post.API/Data/Post.cs
+    startLine: 31
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public string? FeaturedImageUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FeaturedImageUrl As String
+  overload: Post.API.Data.Post.FeaturedImageUrl*
+- uid: Post.API.Data.Post.ViewCount
+  commentId: P:Post.API.Data.Post.ViewCount
+  id: ViewCount
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: ViewCount
+  nameWithType: Post.ViewCount
+  fullName: Post.API.Data.Post.ViewCount
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: ViewCount
+    path: Post.API/Data/Post.cs
+    startLine: 33
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public int ViewCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ViewCount As Integer
+  overload: Post.API.Data.Post.ViewCount*
+- uid: Post.API.Data.Post.Excerpt
+  commentId: P:Post.API.Data.Post.Excerpt
+  id: Excerpt
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Excerpt
+  nameWithType: Post.Excerpt
+  fullName: Post.API.Data.Post.Excerpt
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Excerpt
+    path: Post.API/Data/Post.cs
+    startLine: 35
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: >-
+      [StringLength(200)]
+
+      public string? Excerpt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(200)>
+
+      Public Property Excerpt As String
+  overload: Post.API.Data.Post.Excerpt*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 200
+- uid: Post.API.Data.Post.Status
+  commentId: P:Post.API.Data.Post.Status
+  id: Status
+  parent: Post.API.Data.Post
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Post.Status
+  fullName: Post.API.Data.Post.Status
+  type: Property
+  source:
+    remote:
+      path: Post.API/Data/Post.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Status
+    path: Post.API/Data/Post.cs
+    startLine: 38
+  assemblies:
+  - Post.API
+  namespace: Post.API.Data
+  syntax:
+    content: public PostStatus Status { get; set; }
+    parameters: []
+    return:
+      type: Post.API.Data.PostStatus
+    content.vb: Public Property Status As PostStatus
+  overload: Post.API.Data.Post.Status*
+references:
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  href: Post.html
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Post.API.Data.Post.Id*
+  commentId: Overload:Post.API.Data.Post.Id
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Id
+  name: Id
+  nameWithType: Post.Id
+  fullName: Post.API.Data.Post.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Post.API.Data.Post.Title*
+  commentId: Overload:Post.API.Data.Post.Title
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Title
+  name: Title
+  nameWithType: Post.Title
+  fullName: Post.API.Data.Post.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Post.API.Data.Post.Description*
+  commentId: Overload:Post.API.Data.Post.Description
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Description
+  name: Description
+  nameWithType: Post.Description
+  fullName: Post.API.Data.Post.Description
+- uid: Post.API.Data.Post.CreatedAt*
+  commentId: Overload:Post.API.Data.Post.CreatedAt
+  href: Post.API.Data.Post.html#Post_API_Data_Post_CreatedAt
+  name: CreatedAt
+  nameWithType: Post.CreatedAt
+  fullName: Post.API.Data.Post.CreatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Post.API.Data.Post.CreatedBy*
+  commentId: Overload:Post.API.Data.Post.CreatedBy
+  href: Post.API.Data.Post.html#Post_API_Data_Post_CreatedBy
+  name: CreatedBy
+  nameWithType: Post.CreatedBy
+  fullName: Post.API.Data.Post.CreatedBy
+- uid: Post.API.Data.Post.LastModifiedAt*
+  commentId: Overload:Post.API.Data.Post.LastModifiedAt
+  href: Post.API.Data.Post.html#Post_API_Data_Post_LastModifiedAt
+  name: LastModifiedAt
+  nameWithType: Post.LastModifiedAt
+  fullName: Post.API.Data.Post.LastModifiedAt
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Post.API.Data.Post.LastModifiedBy*
+  commentId: Overload:Post.API.Data.Post.LastModifiedBy
+  href: Post.API.Data.Post.html#Post_API_Data_Post_LastModifiedBy
+  name: LastModifiedBy
+  nameWithType: Post.LastModifiedBy
+  fullName: Post.API.Data.Post.LastModifiedBy
+- uid: Post.API.Data.Post.IsPublished*
+  commentId: Overload:Post.API.Data.Post.IsPublished
+  href: Post.API.Data.Post.html#Post_API_Data_Post_IsPublished
+  name: IsPublished
+  nameWithType: Post.IsPublished
+  fullName: Post.API.Data.Post.IsPublished
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Post.API.Data.Post.PublishedAt*
+  commentId: Overload:Post.API.Data.Post.PublishedAt
+  href: Post.API.Data.Post.html#Post_API_Data_Post_PublishedAt
+  name: PublishedAt
+  nameWithType: Post.PublishedAt
+  fullName: Post.API.Data.Post.PublishedAt
+- uid: Post.API.Data.Post.Tags*
+  commentId: Overload:Post.API.Data.Post.Tags
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Tags
+  name: Tags
+  nameWithType: Post.Tags
+  fullName: Post.API.Data.Post.Tags
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Post.API.Data.Post.FeaturedImageUrl*
+  commentId: Overload:Post.API.Data.Post.FeaturedImageUrl
+  href: Post.API.Data.Post.html#Post_API_Data_Post_FeaturedImageUrl
+  name: FeaturedImageUrl
+  nameWithType: Post.FeaturedImageUrl
+  fullName: Post.API.Data.Post.FeaturedImageUrl
+- uid: Post.API.Data.Post.ViewCount*
+  commentId: Overload:Post.API.Data.Post.ViewCount
+  href: Post.API.Data.Post.html#Post_API_Data_Post_ViewCount
+  name: ViewCount
+  nameWithType: Post.ViewCount
+  fullName: Post.API.Data.Post.ViewCount
+- uid: Post.API.Data.Post.Excerpt*
+  commentId: Overload:Post.API.Data.Post.Excerpt
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Excerpt
+  name: Excerpt
+  nameWithType: Post.Excerpt
+  fullName: Post.API.Data.Post.Excerpt
+- uid: Post.API.Data.Post.Status*
+  commentId: Overload:Post.API.Data.Post.Status
+  href: Post.API.Data.Post.html#Post_API_Data_Post_Status
+  name: Status
+  nameWithType: Post.Status
+  fullName: Post.API.Data.Post.Status
+- uid: Post.API.Data.PostStatus
+  commentId: T:Post.API.Data.PostStatus
+  parent: Post.API.Data
+  href: Post.API.Data.PostStatus.html
+  name: PostStatus
+  nameWithType: PostStatus
+  fullName: Post.API.Data.PostStatus

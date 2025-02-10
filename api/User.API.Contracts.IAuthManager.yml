@@ -1,0 +1,399 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Contracts.IAuthManager
+  commentId: T:User.API.Contracts.IAuthManager
+  id: IAuthManager
+  parent: User.API.Contracts
+  children:
+  - User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  - User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  - User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  langs:
+  - csharp
+  - vb
+  name: IAuthManager
+  nameWithType: IAuthManager
+  fullName: User.API.Contracts.IAuthManager
+  type: Interface
+  source:
+    remote:
+      path: User.API/Contracts/IAuthManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: IAuthManager
+    path: User.API/Contracts/IAuthManager.cs
+    startLine: 9
+  assemblies:
+  - User.API
+  namespace: User.API.Contracts
+  summary: Interface for authentication management.
+  example: []
+  syntax:
+    content: public interface IAuthManager
+    content.vb: Public Interface IAuthManager
+- uid: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  commentId: M:User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  id: Register(User.API.ModelDtos.RegisterDto)
+  parent: User.API.Contracts.IAuthManager
+  langs:
+  - csharp
+  - vb
+  name: Register(RegisterDto)
+  nameWithType: IAuthManager.Register(RegisterDto)
+  fullName: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  type: Method
+  source:
+    remote:
+      path: User.API/Contracts/IAuthManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Register
+    path: User.API/Contracts/IAuthManager.cs
+    startLine: 16
+  assemblies:
+  - User.API
+  namespace: User.API.Contracts
+  summary: Registers a new user.
+  example: []
+  syntax:
+    content: Task<IEnumerable<IdentityError>> Register(RegisterDto registerDto)
+    parameters:
+    - id: registerDto
+      type: User.API.ModelDtos.RegisterDto
+      description: The user registration details.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+      description: A list of identity errors, if any.
+    content.vb: Function Register(registerDto As RegisterDto) As Task(Of IEnumerable(Of IdentityError))
+  overload: User.API.Contracts.IAuthManager.Register*
+- uid: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  commentId: M:User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  id: Login(User.API.ModelDtos.AuthDto)
+  parent: User.API.Contracts.IAuthManager
+  langs:
+  - csharp
+  - vb
+  name: Login(AuthDto)
+  nameWithType: IAuthManager.Login(AuthDto)
+  fullName: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  type: Method
+  source:
+    remote:
+      path: User.API/Contracts/IAuthManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Login
+    path: User.API/Contracts/IAuthManager.cs
+    startLine: 23
+  assemblies:
+  - User.API
+  namespace: User.API.Contracts
+  summary: Logs in a user.
+  example: []
+  syntax:
+    content: Task<AuthResponseDto> Login(AuthDto loginDto)
+    parameters:
+    - id: loginDto
+      type: User.API.ModelDtos.AuthDto
+      description: The login credentials.
+    return:
+      type: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+      description: An authentication response containing the user token.
+    content.vb: Function Login(loginDto As AuthDto) As Task(Of AuthResponseDto)
+  overload: User.API.Contracts.IAuthManager.Login*
+- uid: User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  commentId: M:User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  id: RefreshToken(System.String)
+  parent: User.API.Contracts.IAuthManager
+  langs:
+  - csharp
+  - vb
+  name: RefreshToken(string)
+  nameWithType: IAuthManager.RefreshToken(string)
+  fullName: User.API.Contracts.IAuthManager.RefreshToken(string)
+  type: Method
+  source:
+    remote:
+      path: User.API/Contracts/IAuthManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: RefreshToken
+    path: User.API/Contracts/IAuthManager.cs
+    startLine: 30
+  assemblies:
+  - User.API
+  namespace: User.API.Contracts
+  summary: Refreshes an expired authentication token.
+  example: []
+  syntax:
+    content: Task<AuthResponseDto> RefreshToken(string refreshToken)
+    parameters:
+    - id: refreshToken
+      type: System.String
+      description: The refresh token.
+    return:
+      type: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+      description: An authentication response containing a new token.
+    content.vb: Function RefreshToken(refreshToken As String) As Task(Of AuthResponseDto)
+  overload: User.API.Contracts.IAuthManager.RefreshToken*
+  nameWithType.vb: IAuthManager.RefreshToken(String)
+  fullName.vb: User.API.Contracts.IAuthManager.RefreshToken(String)
+  name.vb: RefreshToken(String)
+references:
+- uid: User.API.Contracts
+  commentId: N:User.API.Contracts
+  href: User.html
+  name: User.API.Contracts
+  nameWithType: User.API.Contracts
+  fullName: User.API.Contracts
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html
+- uid: User.API.Contracts.IAuthManager.Register*
+  commentId: Overload:User.API.Contracts.IAuthManager.Register
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Register_User_API_ModelDtos_RegisterDto_
+  name: Register
+  nameWithType: IAuthManager.Register
+  fullName: User.API.Contracts.IAuthManager.Register
+- uid: User.API.ModelDtos.RegisterDto
+  commentId: T:User.API.ModelDtos.RegisterDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.RegisterDto.html
+  name: RegisterDto
+  nameWithType: RegisterDto
+  fullName: User.API.ModelDtos.RegisterDto
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<IdentityError>>
+  nameWithType: Task<IEnumerable<IdentityError>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.AspNetCore.Identity.IdentityError>>
+  nameWithType.vb: Task(Of IEnumerable(Of IdentityError))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Microsoft.AspNetCore.Identity.IdentityError))
+  name.vb: Task(Of IEnumerable(Of IdentityError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Identity.IdentityError
+    name: IdentityError
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identityerror
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Identity.IdentityError
+    name: IdentityError
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identityerror
+  - name: )
+  - name: )
+- uid: User.API.ModelDtos
+  commentId: N:User.API.ModelDtos
+  href: User.html
+  name: User.API.ModelDtos
+  nameWithType: User.API.ModelDtos
+  fullName: User.API.ModelDtos
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: User.API.Contracts.IAuthManager.Login*
+  commentId: Overload:User.API.Contracts.IAuthManager.Login
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Login_User_API_ModelDtos_AuthDto_
+  name: Login
+  nameWithType: IAuthManager.Login
+  fullName: User.API.Contracts.IAuthManager.Login
+- uid: User.API.ModelDtos.AuthDto
+  commentId: T:User.API.ModelDtos.AuthDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.AuthDto.html
+  name: AuthDto
+  nameWithType: AuthDto
+  fullName: User.API.ModelDtos.AuthDto
+- uid: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+  commentId: T:System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AuthResponseDto>
+  nameWithType: Task<AuthResponseDto>
+  fullName: System.Threading.Tasks.Task<User.API.Data.AuthResponseDto>
+  nameWithType.vb: Task(Of AuthResponseDto)
+  fullName.vb: System.Threading.Tasks.Task(Of User.API.Data.AuthResponseDto)
+  name.vb: Task(Of AuthResponseDto)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: User.API.Data.AuthResponseDto
+    name: AuthResponseDto
+    href: User.API.Data.AuthResponseDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: User.API.Data.AuthResponseDto
+    name: AuthResponseDto
+    href: User.API.Data.AuthResponseDto.html
+  - name: )
+- uid: User.API.Contracts.IAuthManager.RefreshToken*
+  commentId: Overload:User.API.Contracts.IAuthManager.RefreshToken
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_RefreshToken_System_String_
+  name: RefreshToken
+  nameWithType: IAuthManager.RefreshToken
+  fullName: User.API.Contracts.IAuthManager.RefreshToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

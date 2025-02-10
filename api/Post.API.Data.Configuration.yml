@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Data.Configuration
+  commentId: N:Post.API.Data.Configuration
+  id: Post.API.Data.Configuration
+  children:
+  - Post.API.Data.Configuration.PostConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Data.Configuration
+  nameWithType: Post.API.Data.Configuration
+  fullName: Post.API.Data.Configuration
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Data.Configuration.PostConfiguration
+  commentId: T:Post.API.Data.Configuration.PostConfiguration
+  href: Post.API.Data.Configuration.PostConfiguration.html
+  name: PostConfiguration
+  nameWithType: PostConfiguration
+  fullName: Post.API.Data.Configuration.PostConfiguration

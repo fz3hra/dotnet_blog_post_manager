@@ -1,0 +1,1558 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Repository.PostRepository
+  commentId: T:Post.API.Repository.PostRepository
+  id: PostRepository
+  parent: Post.API.Repository
+  children:
+  - Post.API.Repository.PostRepository.#ctor(Post.API.Data.PostDbContext,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository})
+  - Post.API.Repository.PostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  - Post.API.Repository.PostRepository.DeletePost(System.Int32,System.String)
+  - Post.API.Repository.PostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  - Post.API.Repository.PostRepository.GetPostById(System.Int32)
+  - Post.API.Repository.PostRepository.GetPostsByTag(System.String)
+  - Post.API.Repository.PostRepository.IncrementViewCount(System.Int32)
+  - Post.API.Repository.PostRepository.SearchPosts(System.String)
+  - Post.API.Repository.PostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  langs:
+  - csharp
+  - vb
+  name: PostRepository
+  nameWithType: PostRepository
+  fullName: Post.API.Repository.PostRepository
+  type: Class
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: PostRepository
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 11
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Repository implementation for managing posts.
+  example: []
+  syntax:
+    content: 'public class PostRepository : IPostRepository'
+    content.vb: Public Class PostRepository Implements IPostRepository
+  inheritance:
+  - System.Object
+  implements:
+  - Post.API.Contracts.IPostRepository
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Post.API.Repository.PostRepository.#ctor(Post.API.Data.PostDbContext,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository})
+  commentId: M:Post.API.Repository.PostRepository.#ctor(Post.API.Data.PostDbContext,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository})
+  id: '#ctor(Post.API.Data.PostDbContext,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository})'
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: PostRepository(PostDbContext, IMapper, ILogger<PostRepository>)
+  nameWithType: PostRepository.PostRepository(PostDbContext, IMapper, ILogger<PostRepository>)
+  fullName: Post.API.Repository.PostRepository.PostRepository(Post.API.Data.PostDbContext, AutoMapper.IMapper, Microsoft.Extensions.Logging.ILogger<Post.API.Repository.PostRepository>)
+  type: Constructor
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: .ctor
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 23
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Initializes a new instance of the <xref href="Post.API.Repository.PostRepository" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PostRepository(PostDbContext context, IMapper mapper, ILogger<PostRepository> logger)
+    parameters:
+    - id: context
+      type: Post.API.Data.PostDbContext
+      description: The database context.
+    - id: mapper
+      type: AutoMapper.IMapper
+      description: The mapper instance for DTO mapping.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository}
+      description: The logger instance for logging operations.
+    content.vb: Public Sub New(context As PostDbContext, mapper As IMapper, logger As ILogger(Of PostRepository))
+  overload: Post.API.Repository.PostRepository.#ctor*
+  nameWithType.vb: PostRepository.New(PostDbContext, IMapper, ILogger(Of PostRepository))
+  fullName.vb: Post.API.Repository.PostRepository.New(Post.API.Data.PostDbContext, AutoMapper.IMapper, Microsoft.Extensions.Logging.ILogger(Of Post.API.Repository.PostRepository))
+  name.vb: New(PostDbContext, IMapper, ILogger(Of PostRepository))
+- uid: Post.API.Repository.PostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  commentId: M:Post.API.Repository.PostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  id: CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: CreatePost(CreatePostDto, string)
+  nameWithType: PostRepository.CreatePost(CreatePostDto, string)
+  fullName: Post.API.Repository.PostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto, string)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: CreatePost
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 36
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Creates a new post in the database.
+  example: []
+  syntax:
+    content: public Task<PostResponse> CreatePost(CreatePostDto postDto, string userId)
+    parameters:
+    - id: postDto
+      type: Post.API.ModelDtos.CreatePostDto
+      description: The data for the new post.
+    - id: userId
+      type: System.String
+      description: The ID of the user creating the post.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostResponse}
+      description: A response containing the created post.
+    content.vb: Public Function CreatePost(postDto As CreatePostDto, userId As String) As Task(Of PostResponse)
+  overload: Post.API.Repository.PostRepository.CreatePost*
+  implements:
+  - Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  nameWithType.vb: PostRepository.CreatePost(CreatePostDto, String)
+  fullName.vb: Post.API.Repository.PostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto, String)
+  name.vb: CreatePost(CreatePostDto, String)
+- uid: Post.API.Repository.PostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  commentId: M:Post.API.Repository.PostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  id: GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllPosts(string?, PostStatus?)
+  nameWithType: PostRepository.GetAllPosts(string?, PostStatus?)
+  fullName: Post.API.Repository.PostRepository.GetAllPosts(string?, Post.API.Data.PostStatus?)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetAllPosts
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 72
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Retrieves all posts, optionally filtered by user and/or status.
+  example: []
+  syntax:
+    content: public Task<PostsResponse> GetAllPosts(string? userId = null, PostStatus? status = null)
+    parameters:
+    - id: userId
+      type: System.String
+      description: The ID of the user whose posts to retrieve (optional).
+    - id: status
+      type: System.Nullable{Post.API.Data.PostStatus}
+      description: The status of posts to filter by (optional).
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostsResponse}
+      description: A response containing the list of posts.
+    content.vb: Public Function GetAllPosts(userId As String = Nothing, status As PostStatus? = Nothing) As Task(Of PostsResponse)
+  overload: Post.API.Repository.PostRepository.GetAllPosts*
+  implements:
+  - Post.API.Contracts.IPostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  nameWithType.vb: PostRepository.GetAllPosts(String, PostStatus?)
+  fullName.vb: Post.API.Repository.PostRepository.GetAllPosts(String, Post.API.Data.PostStatus?)
+  name.vb: GetAllPosts(String, PostStatus?)
+- uid: Post.API.Repository.PostRepository.GetPostById(System.Int32)
+  commentId: M:Post.API.Repository.PostRepository.GetPostById(System.Int32)
+  id: GetPostById(System.Int32)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: GetPostById(int)
+  nameWithType: PostRepository.GetPostById(int)
+  fullName: Post.API.Repository.PostRepository.GetPostById(int)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetPostById
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 113
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Retrieves a post by its ID.
+  example: []
+  syntax:
+    content: public Task<PostResponse> GetPostById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the post to retrieve.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostResponse}
+      description: A response containing the post details.
+    content.vb: Public Function GetPostById(id As Integer) As Task(Of PostResponse)
+  overload: Post.API.Repository.PostRepository.GetPostById*
+  implements:
+  - Post.API.Contracts.IPostRepository.GetPostById(System.Int32)
+  nameWithType.vb: PostRepository.GetPostById(Integer)
+  fullName.vb: Post.API.Repository.PostRepository.GetPostById(Integer)
+  name.vb: GetPostById(Integer)
+- uid: Post.API.Repository.PostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  commentId: M:Post.API.Repository.PostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  id: UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: UpdatePost(int, UpdatePostDto, string)
+  nameWithType: PostRepository.UpdatePost(int, UpdatePostDto, string)
+  fullName: Post.API.Repository.PostRepository.UpdatePost(int, Post.API.ModelDtos.UpdatePostDto, string)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: UpdatePost
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 153
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Updates an existing post.
+  example: []
+  syntax:
+    content: public Task<PostResponse> UpdatePost(int id, UpdatePostDto postDto, string userId)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the post to update.
+    - id: postDto
+      type: Post.API.ModelDtos.UpdatePostDto
+      description: The data to update the post with.
+    - id: userId
+      type: System.String
+      description: The ID of the user updating the post.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostResponse}
+      description: A response containing the updated post.
+    content.vb: Public Function UpdatePost(id As Integer, postDto As UpdatePostDto, userId As String) As Task(Of PostResponse)
+  overload: Post.API.Repository.PostRepository.UpdatePost*
+  implements:
+  - Post.API.Contracts.IPostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  nameWithType.vb: PostRepository.UpdatePost(Integer, UpdatePostDto, String)
+  fullName.vb: Post.API.Repository.PostRepository.UpdatePost(Integer, Post.API.ModelDtos.UpdatePostDto, String)
+  name.vb: UpdatePost(Integer, UpdatePostDto, String)
+- uid: Post.API.Repository.PostRepository.DeletePost(System.Int32,System.String)
+  commentId: M:Post.API.Repository.PostRepository.DeletePost(System.Int32,System.String)
+  id: DeletePost(System.Int32,System.String)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: DeletePost(int, string)
+  nameWithType: PostRepository.DeletePost(int, string)
+  fullName: Post.API.Repository.PostRepository.DeletePost(int, string)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: DeletePost
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 209
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Deletes a post by its ID.
+  example: []
+  syntax:
+    content: public Task<BaseResponse> DeletePost(int id, string userId)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the post to delete.
+    - id: userId
+      type: System.String
+      description: The ID of the user deleting the post.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.BaseResponse}
+      description: A response indicating the deletion status.
+    content.vb: Public Function DeletePost(id As Integer, userId As String) As Task(Of BaseResponse)
+  overload: Post.API.Repository.PostRepository.DeletePost*
+  implements:
+  - Post.API.Contracts.IPostRepository.DeletePost(System.Int32,System.String)
+  nameWithType.vb: PostRepository.DeletePost(Integer, String)
+  fullName.vb: Post.API.Repository.PostRepository.DeletePost(Integer, String)
+  name.vb: DeletePost(Integer, String)
+- uid: Post.API.Repository.PostRepository.GetPostsByTag(System.String)
+  commentId: M:Post.API.Repository.PostRepository.GetPostsByTag(System.String)
+  id: GetPostsByTag(System.String)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: GetPostsByTag(string)
+  nameWithType: PostRepository.GetPostsByTag(string)
+  fullName: Post.API.Repository.PostRepository.GetPostsByTag(string)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetPostsByTag
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 258
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Retrieves posts associated with a specific tag.
+  example: []
+  syntax:
+    content: public Task<PostsResponse> GetPostsByTag(string tag)
+    parameters:
+    - id: tag
+      type: System.String
+      description: The tag to filter posts by.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostsResponse}
+      description: A response containing the posts with the specified tag.
+    content.vb: Public Function GetPostsByTag(tag As String) As Task(Of PostsResponse)
+  overload: Post.API.Repository.PostRepository.GetPostsByTag*
+  implements:
+  - Post.API.Contracts.IPostRepository.GetPostsByTag(System.String)
+  nameWithType.vb: PostRepository.GetPostsByTag(String)
+  fullName.vb: Post.API.Repository.PostRepository.GetPostsByTag(String)
+  name.vb: GetPostsByTag(String)
+- uid: Post.API.Repository.PostRepository.IncrementViewCount(System.Int32)
+  commentId: M:Post.API.Repository.PostRepository.IncrementViewCount(System.Int32)
+  id: IncrementViewCount(System.Int32)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: IncrementViewCount(int)
+  nameWithType: PostRepository.IncrementViewCount(int)
+  fullName: Post.API.Repository.PostRepository.IncrementViewCount(int)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: IncrementViewCount
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 289
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Increments the view count for a specific post.
+  example: []
+  syntax:
+    content: public Task<bool> IncrementViewCount(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+      description: The ID of the post.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: A boolean indicating whether the operation succeeded.
+    content.vb: Public Function IncrementViewCount(id As Integer) As Task(Of Boolean)
+  overload: Post.API.Repository.PostRepository.IncrementViewCount*
+  implements:
+  - Post.API.Contracts.IPostRepository.IncrementViewCount(System.Int32)
+  nameWithType.vb: PostRepository.IncrementViewCount(Integer)
+  fullName.vb: Post.API.Repository.PostRepository.IncrementViewCount(Integer)
+  name.vb: IncrementViewCount(Integer)
+- uid: Post.API.Repository.PostRepository.SearchPosts(System.String)
+  commentId: M:Post.API.Repository.PostRepository.SearchPosts(System.String)
+  id: SearchPosts(System.String)
+  parent: Post.API.Repository.PostRepository
+  langs:
+  - csharp
+  - vb
+  name: SearchPosts(string)
+  nameWithType: PostRepository.SearchPosts(string)
+  fullName: Post.API.Repository.PostRepository.SearchPosts(string)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Repository/PostRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: SearchPosts
+    path: Post.API/Repository/PostRepository.cs
+    startLine: 312
+  assemblies:
+  - Post.API
+  namespace: Post.API.Repository
+  summary: Searches posts by a term.
+  example: []
+  syntax:
+    content: public Task<PostsResponse> SearchPosts(string searchTerm)
+    parameters:
+    - id: searchTerm
+      type: System.String
+      description: The term to search posts by.
+    return:
+      type: System.Threading.Tasks.Task{Post.API.ModelDtos.PostsResponse}
+      description: A task representing the asynchronous operation.
+    content.vb: Public Function SearchPosts(searchTerm As String) As Task(Of PostsResponse)
+  overload: Post.API.Repository.PostRepository.SearchPosts*
+  implements:
+  - Post.API.Contracts.IPostRepository.SearchPosts(System.String)
+  nameWithType.vb: PostRepository.SearchPosts(String)
+  fullName.vb: Post.API.Repository.PostRepository.SearchPosts(String)
+  name.vb: SearchPosts(String)
+references:
+- uid: Post.API.Repository
+  commentId: N:Post.API.Repository
+  href: Post.html
+  name: Post.API.Repository
+  nameWithType: Post.API.Repository
+  fullName: Post.API.Repository
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Repository
+    name: Repository
+    href: Post.API.Repository.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Repository
+    name: Repository
+    href: Post.API.Repository.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Post.API.Contracts.IPostRepository
+  commentId: T:Post.API.Contracts.IPostRepository
+  parent: Post.API.Contracts
+  href: Post.API.Contracts.IPostRepository.html
+  name: IPostRepository
+  nameWithType: IPostRepository
+  fullName: Post.API.Contracts.IPostRepository
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Post.API.Contracts
+  commentId: N:Post.API.Contracts
+  href: Post.html
+  name: Post.API.Contracts
+  nameWithType: Post.API.Contracts
+  fullName: Post.API.Contracts
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html
+- uid: Post.API.Repository.PostRepository
+  commentId: T:Post.API.Repository.PostRepository
+  href: Post.API.Repository.PostRepository.html
+  name: PostRepository
+  nameWithType: PostRepository
+  fullName: Post.API.Repository.PostRepository
+- uid: Post.API.Repository.PostRepository.#ctor*
+  commentId: Overload:Post.API.Repository.PostRepository.#ctor
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository__ctor_Post_API_Data_PostDbContext_AutoMapper_IMapper_Microsoft_Extensions_Logging_ILogger_Post_API_Repository_PostRepository__
+  name: PostRepository
+  nameWithType: PostRepository.PostRepository
+  fullName: Post.API.Repository.PostRepository.PostRepository
+  nameWithType.vb: PostRepository.New
+  fullName.vb: Post.API.Repository.PostRepository.New
+  name.vb: New
+- uid: Post.API.Data.PostDbContext
+  commentId: T:Post.API.Data.PostDbContext
+  parent: Post.API.Data
+  href: Post.API.Data.PostDbContext.html
+  name: PostDbContext
+  nameWithType: PostDbContext
+  fullName: Post.API.Data.PostDbContext
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Post.API.Repository.PostRepository}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<PostRepository>
+  nameWithType: ILogger<PostRepository>
+  fullName: Microsoft.Extensions.Logging.ILogger<Post.API.Repository.PostRepository>
+  nameWithType.vb: ILogger(Of PostRepository)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Post.API.Repository.PostRepository)
+  name.vb: ILogger(Of PostRepository)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Post.API.Repository.PostRepository
+    name: PostRepository
+    href: Post.API.Repository.PostRepository.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Post.API.Repository.PostRepository
+    name: PostRepository
+    href: Post.API.Repository.PostRepository.html
+  - name: )
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  href: Post.html
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Post.API.Repository.PostRepository.CreatePost*
+  commentId: Overload:Post.API.Repository.PostRepository.CreatePost
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_CreatePost_Post_API_ModelDtos_CreatePostDto_System_String_
+  name: CreatePost
+  nameWithType: PostRepository.CreatePost
+  fullName: Post.API.Repository.PostRepository.CreatePost
+- uid: Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  commentId: M:Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_CreatePost_Post_API_ModelDtos_CreatePostDto_System_String_
+  name: CreatePost(CreatePostDto, string)
+  nameWithType: IPostRepository.CreatePost(CreatePostDto, string)
+  fullName: Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto, string)
+  nameWithType.vb: IPostRepository.CreatePost(CreatePostDto, String)
+  fullName.vb: Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto, String)
+  name.vb: CreatePost(CreatePostDto, String)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+    name: CreatePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_CreatePost_Post_API_ModelDtos_CreatePostDto_System_String_
+  - name: (
+  - uid: Post.API.ModelDtos.CreatePostDto
+    name: CreatePostDto
+    href: Post.API.ModelDtos.CreatePostDto.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.CreatePost(Post.API.ModelDtos.CreatePostDto,System.String)
+    name: CreatePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_CreatePost_Post_API_ModelDtos_CreatePostDto_System_String_
+  - name: (
+  - uid: Post.API.ModelDtos.CreatePostDto
+    name: CreatePostDto
+    href: Post.API.ModelDtos.CreatePostDto.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Post.API.ModelDtos.CreatePostDto
+  commentId: T:Post.API.ModelDtos.CreatePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.CreatePostDto.html
+  name: CreatePostDto
+  nameWithType: CreatePostDto
+  fullName: Post.API.ModelDtos.CreatePostDto
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{Post.API.ModelDtos.PostResponse}
+  commentId: T:System.Threading.Tasks.Task{Post.API.ModelDtos.PostResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PostResponse>
+  nameWithType: Task<PostResponse>
+  fullName: System.Threading.Tasks.Task<Post.API.ModelDtos.PostResponse>
+  nameWithType.vb: Task(Of PostResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Post.API.ModelDtos.PostResponse)
+  name.vb: Task(Of PostResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Post.API.ModelDtos.PostResponse
+    name: PostResponse
+    href: Post.API.ModelDtos.PostResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Post.API.ModelDtos.PostResponse
+    name: PostResponse
+    href: Post.API.ModelDtos.PostResponse.html
+  - name: )
+- uid: Post.API.ModelDtos
+  commentId: N:Post.API.ModelDtos
+  href: Post.html
+  name: Post.API.ModelDtos
+  nameWithType: Post.API.ModelDtos
+  fullName: Post.API.ModelDtos
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Post.API.Repository.PostRepository.GetAllPosts*
+  commentId: Overload:Post.API.Repository.PostRepository.GetAllPosts
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_GetAllPosts_System_String_System_Nullable_Post_API_Data_PostStatus__
+  name: GetAllPosts
+  nameWithType: PostRepository.GetAllPosts
+  fullName: Post.API.Repository.PostRepository.GetAllPosts
+- uid: Post.API.Contracts.IPostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  commentId: M:Post.API.Contracts.IPostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetAllPosts_System_String_System_Nullable_Post_API_Data_PostStatus__
+  name: GetAllPosts(string, PostStatus?)
+  nameWithType: IPostRepository.GetAllPosts(string, PostStatus?)
+  fullName: Post.API.Contracts.IPostRepository.GetAllPosts(string, Post.API.Data.PostStatus?)
+  nameWithType.vb: IPostRepository.GetAllPosts(String, PostStatus?)
+  fullName.vb: Post.API.Contracts.IPostRepository.GetAllPosts(String, Post.API.Data.PostStatus?)
+  name.vb: GetAllPosts(String, PostStatus?)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+    name: GetAllPosts
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetAllPosts_System_String_System_Nullable_Post_API_Data_PostStatus__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Post.API.Data.PostStatus
+    name: PostStatus
+    href: Post.API.Data.PostStatus.html
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.GetAllPosts(System.String,System.Nullable{Post.API.Data.PostStatus})
+    name: GetAllPosts
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetAllPosts_System_String_System_Nullable_Post_API_Data_PostStatus__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Post.API.Data.PostStatus
+    name: PostStatus
+    href: Post.API.Data.PostStatus.html
+  - name: '?'
+  - name: )
+- uid: System.Nullable{Post.API.Data.PostStatus}
+  commentId: T:System.Nullable{Post.API.Data.PostStatus}
+  parent: System
+  definition: System.Nullable`1
+  href: Post.API.Data.PostStatus.html
+  name: PostStatus?
+  nameWithType: PostStatus?
+  fullName: Post.API.Data.PostStatus?
+  spec.csharp:
+  - uid: Post.API.Data.PostStatus
+    name: PostStatus
+    href: Post.API.Data.PostStatus.html
+  - name: '?'
+  spec.vb:
+  - uid: Post.API.Data.PostStatus
+    name: PostStatus
+    href: Post.API.Data.PostStatus.html
+  - name: '?'
+- uid: System.Threading.Tasks.Task{Post.API.ModelDtos.PostsResponse}
+  commentId: T:System.Threading.Tasks.Task{Post.API.ModelDtos.PostsResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PostsResponse>
+  nameWithType: Task<PostsResponse>
+  fullName: System.Threading.Tasks.Task<Post.API.ModelDtos.PostsResponse>
+  nameWithType.vb: Task(Of PostsResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Post.API.ModelDtos.PostsResponse)
+  name.vb: Task(Of PostsResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Post.API.ModelDtos.PostsResponse
+    name: PostsResponse
+    href: Post.API.ModelDtos.PostsResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Post.API.ModelDtos.PostsResponse
+    name: PostsResponse
+    href: Post.API.ModelDtos.PostsResponse.html
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Post.API.Repository.PostRepository.GetPostById*
+  commentId: Overload:Post.API.Repository.PostRepository.GetPostById
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_GetPostById_System_Int32_
+  name: GetPostById
+  nameWithType: PostRepository.GetPostById
+  fullName: Post.API.Repository.PostRepository.GetPostById
+- uid: Post.API.Contracts.IPostRepository.GetPostById(System.Int32)
+  commentId: M:Post.API.Contracts.IPostRepository.GetPostById(System.Int32)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostById_System_Int32_
+  name: GetPostById(int)
+  nameWithType: IPostRepository.GetPostById(int)
+  fullName: Post.API.Contracts.IPostRepository.GetPostById(int)
+  nameWithType.vb: IPostRepository.GetPostById(Integer)
+  fullName.vb: Post.API.Contracts.IPostRepository.GetPostById(Integer)
+  name.vb: GetPostById(Integer)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.GetPostById(System.Int32)
+    name: GetPostById
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostById_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.GetPostById(System.Int32)
+    name: GetPostById
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostById_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Post.API.Repository.PostRepository.UpdatePost*
+  commentId: Overload:Post.API.Repository.PostRepository.UpdatePost
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_UpdatePost_System_Int32_Post_API_ModelDtos_UpdatePostDto_System_String_
+  name: UpdatePost
+  nameWithType: PostRepository.UpdatePost
+  fullName: Post.API.Repository.PostRepository.UpdatePost
+- uid: Post.API.Contracts.IPostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  commentId: M:Post.API.Contracts.IPostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_UpdatePost_System_Int32_Post_API_ModelDtos_UpdatePostDto_System_String_
+  name: UpdatePost(int, UpdatePostDto, string)
+  nameWithType: IPostRepository.UpdatePost(int, UpdatePostDto, string)
+  fullName: Post.API.Contracts.IPostRepository.UpdatePost(int, Post.API.ModelDtos.UpdatePostDto, string)
+  nameWithType.vb: IPostRepository.UpdatePost(Integer, UpdatePostDto, String)
+  fullName.vb: Post.API.Contracts.IPostRepository.UpdatePost(Integer, Post.API.ModelDtos.UpdatePostDto, String)
+  name.vb: UpdatePost(Integer, UpdatePostDto, String)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+    name: UpdatePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_UpdatePost_System_Int32_Post_API_ModelDtos_UpdatePostDto_System_String_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Post.API.ModelDtos.UpdatePostDto
+    name: UpdatePostDto
+    href: Post.API.ModelDtos.UpdatePostDto.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.UpdatePost(System.Int32,Post.API.ModelDtos.UpdatePostDto,System.String)
+    name: UpdatePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_UpdatePost_System_Int32_Post_API_ModelDtos_UpdatePostDto_System_String_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: Post.API.ModelDtos.UpdatePostDto
+    name: UpdatePostDto
+    href: Post.API.ModelDtos.UpdatePostDto.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Post.API.ModelDtos.UpdatePostDto
+  commentId: T:Post.API.ModelDtos.UpdatePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.UpdatePostDto.html
+  name: UpdatePostDto
+  nameWithType: UpdatePostDto
+  fullName: Post.API.ModelDtos.UpdatePostDto
+- uid: Post.API.Repository.PostRepository.DeletePost*
+  commentId: Overload:Post.API.Repository.PostRepository.DeletePost
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_DeletePost_System_Int32_System_String_
+  name: DeletePost
+  nameWithType: PostRepository.DeletePost
+  fullName: Post.API.Repository.PostRepository.DeletePost
+- uid: Post.API.Contracts.IPostRepository.DeletePost(System.Int32,System.String)
+  commentId: M:Post.API.Contracts.IPostRepository.DeletePost(System.Int32,System.String)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_DeletePost_System_Int32_System_String_
+  name: DeletePost(int, string)
+  nameWithType: IPostRepository.DeletePost(int, string)
+  fullName: Post.API.Contracts.IPostRepository.DeletePost(int, string)
+  nameWithType.vb: IPostRepository.DeletePost(Integer, String)
+  fullName.vb: Post.API.Contracts.IPostRepository.DeletePost(Integer, String)
+  name.vb: DeletePost(Integer, String)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.DeletePost(System.Int32,System.String)
+    name: DeletePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_DeletePost_System_Int32_System_String_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.DeletePost(System.Int32,System.String)
+    name: DeletePost
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_DeletePost_System_Int32_System_String_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{Post.API.ModelDtos.BaseResponse}
+  commentId: T:System.Threading.Tasks.Task{Post.API.ModelDtos.BaseResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<BaseResponse>
+  nameWithType: Task<BaseResponse>
+  fullName: System.Threading.Tasks.Task<Post.API.ModelDtos.BaseResponse>
+  nameWithType.vb: Task(Of BaseResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Post.API.ModelDtos.BaseResponse)
+  name.vb: Task(Of BaseResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Post.API.ModelDtos.BaseResponse
+    name: BaseResponse
+    href: Post.API.ModelDtos.BaseResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Post.API.ModelDtos.BaseResponse
+    name: BaseResponse
+    href: Post.API.ModelDtos.BaseResponse.html
+  - name: )
+- uid: Post.API.Repository.PostRepository.GetPostsByTag*
+  commentId: Overload:Post.API.Repository.PostRepository.GetPostsByTag
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_GetPostsByTag_System_String_
+  name: GetPostsByTag
+  nameWithType: PostRepository.GetPostsByTag
+  fullName: Post.API.Repository.PostRepository.GetPostsByTag
+- uid: Post.API.Contracts.IPostRepository.GetPostsByTag(System.String)
+  commentId: M:Post.API.Contracts.IPostRepository.GetPostsByTag(System.String)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostsByTag_System_String_
+  name: GetPostsByTag(string)
+  nameWithType: IPostRepository.GetPostsByTag(string)
+  fullName: Post.API.Contracts.IPostRepository.GetPostsByTag(string)
+  nameWithType.vb: IPostRepository.GetPostsByTag(String)
+  fullName.vb: Post.API.Contracts.IPostRepository.GetPostsByTag(String)
+  name.vb: GetPostsByTag(String)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.GetPostsByTag(System.String)
+    name: GetPostsByTag
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostsByTag_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.GetPostsByTag(System.String)
+    name: GetPostsByTag
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_GetPostsByTag_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Post.API.Repository.PostRepository.IncrementViewCount*
+  commentId: Overload:Post.API.Repository.PostRepository.IncrementViewCount
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_IncrementViewCount_System_Int32_
+  name: IncrementViewCount
+  nameWithType: PostRepository.IncrementViewCount
+  fullName: Post.API.Repository.PostRepository.IncrementViewCount
+- uid: Post.API.Contracts.IPostRepository.IncrementViewCount(System.Int32)
+  commentId: M:Post.API.Contracts.IPostRepository.IncrementViewCount(System.Int32)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_IncrementViewCount_System_Int32_
+  name: IncrementViewCount(int)
+  nameWithType: IPostRepository.IncrementViewCount(int)
+  fullName: Post.API.Contracts.IPostRepository.IncrementViewCount(int)
+  nameWithType.vb: IPostRepository.IncrementViewCount(Integer)
+  fullName.vb: Post.API.Contracts.IPostRepository.IncrementViewCount(Integer)
+  name.vb: IncrementViewCount(Integer)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.IncrementViewCount(System.Int32)
+    name: IncrementViewCount
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_IncrementViewCount_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.IncrementViewCount(System.Int32)
+    name: IncrementViewCount
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_IncrementViewCount_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Post.API.Repository.PostRepository.SearchPosts*
+  commentId: Overload:Post.API.Repository.PostRepository.SearchPosts
+  href: Post.API.Repository.PostRepository.html#Post_API_Repository_PostRepository_SearchPosts_System_String_
+  name: SearchPosts
+  nameWithType: PostRepository.SearchPosts
+  fullName: Post.API.Repository.PostRepository.SearchPosts
+- uid: Post.API.Contracts.IPostRepository.SearchPosts(System.String)
+  commentId: M:Post.API.Contracts.IPostRepository.SearchPosts(System.String)
+  parent: Post.API.Contracts.IPostRepository
+  isExternal: true
+  href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_SearchPosts_System_String_
+  name: SearchPosts(string)
+  nameWithType: IPostRepository.SearchPosts(string)
+  fullName: Post.API.Contracts.IPostRepository.SearchPosts(string)
+  nameWithType.vb: IPostRepository.SearchPosts(String)
+  fullName.vb: Post.API.Contracts.IPostRepository.SearchPosts(String)
+  name.vb: SearchPosts(String)
+  spec.csharp:
+  - uid: Post.API.Contracts.IPostRepository.SearchPosts(System.String)
+    name: SearchPosts
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_SearchPosts_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Post.API.Contracts.IPostRepository.SearchPosts(System.String)
+    name: SearchPosts
+    href: Post.API.Contracts.IPostRepository.html#Post_API_Contracts_IPostRepository_SearchPosts_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

@@ -5,6 +5,8 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>bin\Debug\net8.0\MyProject.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,5 +27,12 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="docs\**\*.md" />
+        <Content Include="_site\**\*.html" />
+        <None Include="docfx.json" />
+    </ItemGroup>
+
 
 </Project>

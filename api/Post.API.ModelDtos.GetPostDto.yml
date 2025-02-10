@@ -1,0 +1,653 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.ModelDtos.GetPostDto
+  commentId: T:Post.API.ModelDtos.GetPostDto
+  id: GetPostDto
+  parent: Post.API.ModelDtos
+  children:
+  - Post.API.ModelDtos.GetPostDto.CreatedAt
+  - Post.API.ModelDtos.GetPostDto.CreatedBy
+  - Post.API.ModelDtos.GetPostDto.Id
+  - Post.API.ModelDtos.GetPostDto.IsPublished
+  - Post.API.ModelDtos.GetPostDto.Status
+  - Post.API.ModelDtos.GetPostDto.ViewCount
+  langs:
+  - csharp
+  - vb
+  name: GetPostDto
+  nameWithType: GetPostDto
+  fullName: Post.API.ModelDtos.GetPostDto
+  type: Class
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetPostDto
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 4
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: 'public class GetPostDto : BasePostDto'
+    content.vb: Public Class GetPostDto Inherits BasePostDto
+  inheritance:
+  - System.Object
+  - Post.API.ModelDtos.BasePostDto
+  derivedClasses:
+  - Post.API.ModelDtos.GetPostDetailDto
+  inheritedMembers:
+  - Post.API.ModelDtos.BasePostDto.Title
+  - Post.API.ModelDtos.BasePostDto.Description
+  - Post.API.ModelDtos.BasePostDto.Tags
+  - Post.API.ModelDtos.BasePostDto.FeaturedImageUrl
+  - Post.API.ModelDtos.BasePostDto.Excerpt
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Post.API.ModelDtos.GetPostDto.Id
+  commentId: P:Post.API.ModelDtos.GetPostDto.Id
+  id: Id
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: GetPostDto.Id
+  fullName: Post.API.ModelDtos.GetPostDto.Id
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Id
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 6
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Post.API.ModelDtos.GetPostDto.Id*
+- uid: Post.API.ModelDtos.GetPostDto.CreatedAt
+  commentId: P:Post.API.ModelDtos.GetPostDto.CreatedAt
+  id: CreatedAt
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: GetPostDto.CreatedAt
+  fullName: Post.API.ModelDtos.GetPostDto.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: CreatedAt
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 7
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public DateTime CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property CreatedAt As Date
+  overload: Post.API.ModelDtos.GetPostDto.CreatedAt*
+- uid: Post.API.ModelDtos.GetPostDto.CreatedBy
+  commentId: P:Post.API.ModelDtos.GetPostDto.CreatedBy
+  id: CreatedBy
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: CreatedBy
+  nameWithType: GetPostDto.CreatedBy
+  fullName: Post.API.ModelDtos.GetPostDto.CreatedBy
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: CreatedBy
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 8
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public string CreatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedBy As String
+  overload: Post.API.ModelDtos.GetPostDto.CreatedBy*
+- uid: Post.API.ModelDtos.GetPostDto.Status
+  commentId: P:Post.API.ModelDtos.GetPostDto.Status
+  id: Status
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: GetPostDto.Status
+  fullName: Post.API.ModelDtos.GetPostDto.Status
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Status
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 9
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public PostStatus Status { get; set; }
+    parameters: []
+    return:
+      type: Post.API.Data.PostStatus
+    content.vb: Public Property Status As PostStatus
+  overload: Post.API.ModelDtos.GetPostDto.Status*
+- uid: Post.API.ModelDtos.GetPostDto.ViewCount
+  commentId: P:Post.API.ModelDtos.GetPostDto.ViewCount
+  id: ViewCount
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: ViewCount
+  nameWithType: GetPostDto.ViewCount
+  fullName: Post.API.ModelDtos.GetPostDto.ViewCount
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: ViewCount
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 10
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public int ViewCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ViewCount As Integer
+  overload: Post.API.ModelDtos.GetPostDto.ViewCount*
+- uid: Post.API.ModelDtos.GetPostDto.IsPublished
+  commentId: P:Post.API.ModelDtos.GetPostDto.IsPublished
+  id: IsPublished
+  parent: Post.API.ModelDtos.GetPostDto
+  langs:
+  - csharp
+  - vb
+  name: IsPublished
+  nameWithType: GetPostDto.IsPublished
+  fullName: Post.API.ModelDtos.GetPostDto.IsPublished
+  type: Property
+  source:
+    remote:
+      path: Post.API/ModelDtos/GetPostDto.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: IsPublished
+    path: Post.API/ModelDtos/GetPostDto.cs
+    startLine: 11
+  assemblies:
+  - Post.API
+  namespace: Post.API.ModelDtos
+  syntax:
+    content: public bool IsPublished { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPublished As Boolean
+  overload: Post.API.ModelDtos.GetPostDto.IsPublished*
+references:
+- uid: Post.API.ModelDtos
+  commentId: N:Post.API.ModelDtos
+  href: Post.html
+  name: Post.API.ModelDtos
+  nameWithType: Post.API.ModelDtos
+  fullName: Post.API.ModelDtos
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Post.API.ModelDtos.BasePostDto
+  commentId: T:Post.API.ModelDtos.BasePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.BasePostDto.html
+  name: BasePostDto
+  nameWithType: BasePostDto
+  fullName: Post.API.ModelDtos.BasePostDto
+- uid: Post.API.ModelDtos.BasePostDto.Title
+  commentId: P:Post.API.ModelDtos.BasePostDto.Title
+  parent: Post.API.ModelDtos.BasePostDto
+  href: Post.API.ModelDtos.BasePostDto.html#Post_API_ModelDtos_BasePostDto_Title
+  name: Title
+  nameWithType: BasePostDto.Title
+  fullName: Post.API.ModelDtos.BasePostDto.Title
+- uid: Post.API.ModelDtos.BasePostDto.Description
+  commentId: P:Post.API.ModelDtos.BasePostDto.Description
+  parent: Post.API.ModelDtos.BasePostDto
+  href: Post.API.ModelDtos.BasePostDto.html#Post_API_ModelDtos_BasePostDto_Description
+  name: Description
+  nameWithType: BasePostDto.Description
+  fullName: Post.API.ModelDtos.BasePostDto.Description
+- uid: Post.API.ModelDtos.BasePostDto.Tags
+  commentId: P:Post.API.ModelDtos.BasePostDto.Tags
+  parent: Post.API.ModelDtos.BasePostDto
+  href: Post.API.ModelDtos.BasePostDto.html#Post_API_ModelDtos_BasePostDto_Tags
+  name: Tags
+  nameWithType: BasePostDto.Tags
+  fullName: Post.API.ModelDtos.BasePostDto.Tags
+- uid: Post.API.ModelDtos.BasePostDto.FeaturedImageUrl
+  commentId: P:Post.API.ModelDtos.BasePostDto.FeaturedImageUrl
+  parent: Post.API.ModelDtos.BasePostDto
+  href: Post.API.ModelDtos.BasePostDto.html#Post_API_ModelDtos_BasePostDto_FeaturedImageUrl
+  name: FeaturedImageUrl
+  nameWithType: BasePostDto.FeaturedImageUrl
+  fullName: Post.API.ModelDtos.BasePostDto.FeaturedImageUrl
+- uid: Post.API.ModelDtos.BasePostDto.Excerpt
+  commentId: P:Post.API.ModelDtos.BasePostDto.Excerpt
+  parent: Post.API.ModelDtos.BasePostDto
+  href: Post.API.ModelDtos.BasePostDto.html#Post_API_ModelDtos_BasePostDto_Excerpt
+  name: Excerpt
+  nameWithType: BasePostDto.Excerpt
+  fullName: Post.API.ModelDtos.BasePostDto.Excerpt
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Post.API.ModelDtos.GetPostDto.Id*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.Id
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_Id
+  name: Id
+  nameWithType: GetPostDto.Id
+  fullName: Post.API.ModelDtos.GetPostDto.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Post.API.ModelDtos.GetPostDto.CreatedAt*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.CreatedAt
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_CreatedAt
+  name: CreatedAt
+  nameWithType: GetPostDto.CreatedAt
+  fullName: Post.API.ModelDtos.GetPostDto.CreatedAt
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Post.API.ModelDtos.GetPostDto.CreatedBy*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.CreatedBy
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_CreatedBy
+  name: CreatedBy
+  nameWithType: GetPostDto.CreatedBy
+  fullName: Post.API.ModelDtos.GetPostDto.CreatedBy
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Post.API.ModelDtos.GetPostDto.Status*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.Status
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_Status
+  name: Status
+  nameWithType: GetPostDto.Status
+  fullName: Post.API.ModelDtos.GetPostDto.Status
+- uid: Post.API.Data.PostStatus
+  commentId: T:Post.API.Data.PostStatus
+  parent: Post.API.Data
+  href: Post.API.Data.PostStatus.html
+  name: PostStatus
+  nameWithType: PostStatus
+  fullName: Post.API.Data.PostStatus
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  href: Post.html
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+- uid: Post.API.ModelDtos.GetPostDto.ViewCount*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.ViewCount
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_ViewCount
+  name: ViewCount
+  nameWithType: GetPostDto.ViewCount
+  fullName: Post.API.ModelDtos.GetPostDto.ViewCount
+- uid: Post.API.ModelDtos.GetPostDto.IsPublished*
+  commentId: Overload:Post.API.ModelDtos.GetPostDto.IsPublished
+  href: Post.API.ModelDtos.GetPostDto.html#Post_API_ModelDtos_GetPostDto_IsPublished
+  name: IsPublished
+  nameWithType: GetPostDto.IsPublished
+  fullName: Post.API.ModelDtos.GetPostDto.IsPublished
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

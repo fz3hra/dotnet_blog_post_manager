@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  id: Post.API.Data
+  children:
+  - Post.API.Data.Post
+  - Post.API.Data.PostDbContext
+  - Post.API.Data.PostStatus
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Data.Post
+  commentId: T:Post.API.Data.Post
+  href: Post.API.Data.Post.html
+  name: Post
+  nameWithType: Post
+  fullName: Post.API.Data.Post
+- uid: Post.API.Data.PostStatus
+  commentId: T:Post.API.Data.PostStatus
+  parent: Post.API.Data
+  href: Post.API.Data.PostStatus.html
+  name: PostStatus
+  nameWithType: PostStatus
+  fullName: Post.API.Data.PostStatus
+- uid: Post.API.Data.PostDbContext
+  commentId: T:Post.API.Data.PostDbContext
+  parent: Post.API.Data
+  href: Post.API.Data.PostDbContext.html
+  name: PostDbContext
+  nameWithType: PostDbContext
+  fullName: Post.API.Data.PostDbContext
+- uid: Post.API.Data
+  commentId: N:Post.API.Data
+  href: Post.html
+  name: Post.API.Data
+  nameWithType: Post.API.Data
+  fullName: Post.API.Data
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Data
+    name: Data
+    href: Post.API.Data.html

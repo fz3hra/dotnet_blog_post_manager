@@ -1,0 +1,165 @@
+### YamlMime:TableOfContent
+items:
+- uid: Post.API.Configurations
+  name: Post.API.Configurations
+  type: Namespace
+  items:
+  - uid: Post.API.Configurations.MapperConfig
+    name: MapperConfig
+    type: Class
+- uid: Post.API.Contracts
+  name: Post.API.Contracts
+  type: Namespace
+  items:
+  - uid: Post.API.Contracts.IGenericManager`1
+    name: IGenericManager<T>
+    type: Interface
+  - uid: Post.API.Contracts.IPostRepository
+    name: IPostRepository
+    type: Interface
+- uid: Post.API.Controllers
+  name: Post.API.Controllers
+  type: Namespace
+  items:
+  - uid: Post.API.Controllers.PostController
+    name: PostController
+    type: Class
+- uid: Post.API.Data
+  name: Post.API.Data
+  type: Namespace
+  items:
+  - uid: Post.API.Data.Post
+    name: Post
+    type: Class
+  - uid: Post.API.Data.PostDbContext
+    name: PostDbContext
+    type: Class
+  - uid: Post.API.Data.PostStatus
+    name: PostStatus
+    type: Enum
+- uid: Post.API.Data.Configuration
+  name: Post.API.Data.Configuration
+  type: Namespace
+  items:
+  - uid: Post.API.Data.Configuration.PostConfiguration
+    name: PostConfiguration
+    type: Class
+- uid: Post.API.Migrations
+  name: Post.API.Migrations
+  type: Namespace
+  items:
+  - uid: Post.API.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+  - uid: Post.API.Migrations.UpdatePostModel
+    name: UpdatePostModel
+    type: Class
+  - uid: Post.API.Migrations.UpdateUserModel
+    name: UpdateUserModel
+    type: Class
+  - uid: Post.API.Migrations.postsapi
+    name: postsapi
+    type: Class
+  - uid: Post.API.Migrations.test
+    name: test
+    type: Class
+- uid: Post.API.ModelDtos
+  name: Post.API.ModelDtos
+  type: Namespace
+  items:
+  - uid: Post.API.ModelDtos.BasePostDto
+    name: BasePostDto
+    type: Class
+  - uid: Post.API.ModelDtos.BaseResponse
+    name: BaseResponse
+    type: Class
+  - uid: Post.API.ModelDtos.CreatePostDto
+    name: CreatePostDto
+    type: Class
+  - uid: Post.API.ModelDtos.GetPostDetailDto
+    name: GetPostDetailDto
+    type: Class
+  - uid: Post.API.ModelDtos.GetPostDto
+    name: GetPostDto
+    type: Class
+  - uid: Post.API.ModelDtos.PostResponse
+    name: PostResponse
+    type: Class
+  - uid: Post.API.ModelDtos.PostsResponse
+    name: PostsResponse
+    type: Class
+  - uid: Post.API.ModelDtos.UpdatePostDto
+    name: UpdatePostDto
+    type: Class
+- uid: Post.API.Repository
+  name: Post.API.Repository
+  type: Namespace
+  items:
+  - uid: Post.API.Repository.PostRepository
+    name: PostRepository
+    type: Class
+- uid: User.API.Configurations
+  name: User.API.Configurations
+  type: Namespace
+  items:
+  - uid: User.API.Configurations.MapperConfig
+    name: MapperConfig
+    type: Class
+- uid: User.API.Contracts
+  name: User.API.Contracts
+  type: Namespace
+  items:
+  - uid: User.API.Contracts.IAuthManager
+    name: IAuthManager
+    type: Interface
+  - uid: User.API.Contracts.IGenericManager`1
+    name: IGenericManager<T>
+    type: Interface
+- uid: User.API.Controllers
+  name: User.API.Controllers
+  type: Namespace
+  items:
+  - uid: User.API.Controllers.AuthController
+    name: AuthController
+    type: Class
+- uid: User.API.Data
+  name: User.API.Data
+  type: Namespace
+  items:
+  - uid: User.API.Data.AuthResponseDto
+    name: AuthResponseDto
+    type: Class
+  - uid: User.API.Data.UserApi
+    name: UserApi
+    type: Class
+  - uid: User.API.Data.UserDbContext
+    name: UserDbContext
+    type: Class
+- uid: User.API.Migrations
+  name: User.API.Migrations
+  type: Namespace
+  items:
+  - uid: User.API.Migrations.test
+    name: test
+    type: Class
+  - uid: User.API.Migrations.userapi
+    name: userapi
+    type: Class
+- uid: User.API.ModelDtos
+  name: User.API.ModelDtos
+  type: Namespace
+  items:
+  - uid: User.API.ModelDtos.AuthDto
+    name: AuthDto
+    type: Class
+  - uid: User.API.ModelDtos.RegisterDto
+    name: RegisterDto
+    type: Class
+- uid: User.API.Repository
+  name: User.API.Repository
+  type: Namespace
+  items:
+  - uid: User.API.Repository.AuthRepository
+    name: AuthRepository
+    type: Class
+memberLayout: SamePage

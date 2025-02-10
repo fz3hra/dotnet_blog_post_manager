@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Contracts
+  commentId: N:User.API.Contracts
+  id: User.API.Contracts
+  children:
+  - User.API.Contracts.IAuthManager
+  - User.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: User.API.Contracts
+  nameWithType: User.API.Contracts
+  fullName: User.API.Contracts
+  type: Namespace
+  assemblies:
+  - User.API
+references:
+- uid: User.API.Contracts.IAuthManager
+  commentId: T:User.API.Contracts.IAuthManager
+  parent: User.API.Contracts
+  href: User.API.Contracts.IAuthManager.html
+  name: IAuthManager
+  nameWithType: IAuthManager
+  fullName: User.API.Contracts.IAuthManager
+- uid: User.API.Contracts.IGenericManager`1
+  commentId: T:User.API.Contracts.IGenericManager`1
+  href: User.API.Contracts.IGenericManager-1.html
+  name: IGenericManager<T>
+  nameWithType: IGenericManager<T>
+  fullName: User.API.Contracts.IGenericManager<T>
+  nameWithType.vb: IGenericManager(Of T)
+  fullName.vb: User.API.Contracts.IGenericManager(Of T)
+  name.vb: IGenericManager(Of T)
+  spec.csharp:
+  - uid: User.API.Contracts.IGenericManager`1
+    name: IGenericManager
+    href: User.API.Contracts.IGenericManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: User.API.Contracts.IGenericManager`1
+    name: IGenericManager
+    href: User.API.Contracts.IGenericManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: User.API.Contracts
+  commentId: N:User.API.Contracts
+  href: User.html
+  name: User.API.Contracts
+  nameWithType: User.API.Contracts
+  fullName: User.API.Contracts
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.ModelDtos
+  commentId: N:User.API.ModelDtos
+  id: User.API.ModelDtos
+  children:
+  - User.API.ModelDtos.AuthDto
+  - User.API.ModelDtos.RegisterDto
+  langs:
+  - csharp
+  - vb
+  name: User.API.ModelDtos
+  nameWithType: User.API.ModelDtos
+  fullName: User.API.ModelDtos
+  type: Namespace
+  assemblies:
+  - User.API
+references:
+- uid: User.API.ModelDtos.AuthDto
+  commentId: T:User.API.ModelDtos.AuthDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.AuthDto.html
+  name: AuthDto
+  nameWithType: AuthDto
+  fullName: User.API.ModelDtos.AuthDto
+- uid: User.API.ModelDtos.RegisterDto
+  commentId: T:User.API.ModelDtos.RegisterDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.RegisterDto.html
+  name: RegisterDto
+  nameWithType: RegisterDto
+  fullName: User.API.ModelDtos.RegisterDto
+- uid: User.API.ModelDtos
+  commentId: N:User.API.ModelDtos
+  href: User.html
+  name: User.API.ModelDtos
+  nameWithType: User.API.ModelDtos
+  fullName: User.API.ModelDtos
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html

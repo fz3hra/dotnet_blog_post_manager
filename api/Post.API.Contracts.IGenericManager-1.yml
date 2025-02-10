@@ -1,0 +1,575 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Contracts.IGenericManager`1
+  commentId: T:Post.API.Contracts.IGenericManager`1
+  id: IGenericManager`1
+  parent: Post.API.Contracts
+  children:
+  - Post.API.Contracts.IGenericManager`1.AddAsync(`0)
+  - Post.API.Contracts.IGenericManager`1.DeleteAsync(System.Int32)
+  - Post.API.Contracts.IGenericManager`1.Exists(System.Int32)
+  - Post.API.Contracts.IGenericManager`1.GetAllAsync
+  - Post.API.Contracts.IGenericManager`1.GetAsync(System.Nullable{System.Int32})
+  - Post.API.Contracts.IGenericManager`1.UpdateAsync(`0)
+  langs:
+  - csharp
+  - vb
+  name: IGenericManager<T>
+  nameWithType: IGenericManager<T>
+  fullName: Post.API.Contracts.IGenericManager<T>
+  type: Interface
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: IGenericManager
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 2
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: 'public interface IGenericManager<T> where T : class'
+    typeParameters:
+    - id: T
+    content.vb: Public Interface IGenericManager(Of T As Class)
+  nameWithType.vb: IGenericManager(Of T)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T)
+  name.vb: IGenericManager(Of T)
+- uid: Post.API.Contracts.IGenericManager`1.GetAsync(System.Nullable{System.Int32})
+  commentId: M:Post.API.Contracts.IGenericManager`1.GetAsync(System.Nullable{System.Int32})
+  id: GetAsync(System.Nullable{System.Int32})
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(int?)
+  nameWithType: IGenericManager<T>.GetAsync(int?)
+  fullName: Post.API.Contracts.IGenericManager<T>.GetAsync(int?)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetAsync
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 4
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task<T> GetAsync(int? id)
+    parameters:
+    - id: id
+      type: System.Nullable{System.Int32}
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Function GetAsync(id As Integer?) As Task(Of T)
+  overload: Post.API.Contracts.IGenericManager`1.GetAsync*
+  nameWithType.vb: IGenericManager(Of T).GetAsync(Integer?)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).GetAsync(Integer?)
+  name.vb: GetAsync(Integer?)
+- uid: Post.API.Contracts.IGenericManager`1.GetAllAsync
+  commentId: M:Post.API.Contracts.IGenericManager`1.GetAllAsync
+  id: GetAllAsync
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: GetAllAsync()
+  nameWithType: IGenericManager<T>.GetAllAsync()
+  fullName: Post.API.Contracts.IGenericManager<T>.GetAllAsync()
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: GetAllAsync
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 5
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task<List<T>> GetAllAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+    content.vb: Function GetAllAsync() As Task(Of List(Of T))
+  overload: Post.API.Contracts.IGenericManager`1.GetAllAsync*
+  nameWithType.vb: IGenericManager(Of T).GetAllAsync()
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).GetAllAsync()
+- uid: Post.API.Contracts.IGenericManager`1.AddAsync(`0)
+  commentId: M:Post.API.Contracts.IGenericManager`1.AddAsync(`0)
+  id: AddAsync(`0)
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: AddAsync(T)
+  nameWithType: IGenericManager<T>.AddAsync(T)
+  fullName: Post.API.Contracts.IGenericManager<T>.AddAsync(T)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: AddAsync
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 6
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task<T> AddAsync(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    return:
+      type: System.Threading.Tasks.Task{{T}}
+    content.vb: Function AddAsync(entity As T) As Task(Of T)
+  overload: Post.API.Contracts.IGenericManager`1.AddAsync*
+  nameWithType.vb: IGenericManager(Of T).AddAsync(T)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).AddAsync(T)
+- uid: Post.API.Contracts.IGenericManager`1.DeleteAsync(System.Int32)
+  commentId: M:Post.API.Contracts.IGenericManager`1.DeleteAsync(System.Int32)
+  id: DeleteAsync(System.Int32)
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(int)
+  nameWithType: IGenericManager<T>.DeleteAsync(int)
+  fullName: Post.API.Contracts.IGenericManager<T>.DeleteAsync(int)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: DeleteAsync
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 7
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task DeleteAsync(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function DeleteAsync(id As Integer) As Task
+  overload: Post.API.Contracts.IGenericManager`1.DeleteAsync*
+  nameWithType.vb: IGenericManager(Of T).DeleteAsync(Integer)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).DeleteAsync(Integer)
+  name.vb: DeleteAsync(Integer)
+- uid: Post.API.Contracts.IGenericManager`1.UpdateAsync(`0)
+  commentId: M:Post.API.Contracts.IGenericManager`1.UpdateAsync(`0)
+  id: UpdateAsync(`0)
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(T)
+  nameWithType: IGenericManager<T>.UpdateAsync(T)
+  fullName: Post.API.Contracts.IGenericManager<T>.UpdateAsync(T)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: UpdateAsync
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 8
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task UpdateAsync(T entity)
+    parameters:
+    - id: entity
+      type: '{T}'
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function UpdateAsync(entity As T) As Task
+  overload: Post.API.Contracts.IGenericManager`1.UpdateAsync*
+  nameWithType.vb: IGenericManager(Of T).UpdateAsync(T)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).UpdateAsync(T)
+- uid: Post.API.Contracts.IGenericManager`1.Exists(System.Int32)
+  commentId: M:Post.API.Contracts.IGenericManager`1.Exists(System.Int32)
+  id: Exists(System.Int32)
+  parent: Post.API.Contracts.IGenericManager`1
+  langs:
+  - csharp
+  - vb
+  name: Exists(int)
+  nameWithType: IGenericManager<T>.Exists(int)
+  fullName: Post.API.Contracts.IGenericManager<T>.Exists(int)
+  type: Method
+  source:
+    remote:
+      path: Post.API/Contracts/IGenericManager.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Exists
+    path: Post.API/Contracts/IGenericManager.cs
+    startLine: 9
+  assemblies:
+  - Post.API
+  namespace: Post.API.Contracts
+  syntax:
+    content: Task<bool> Exists(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function Exists(id As Integer) As Task(Of Boolean)
+  overload: Post.API.Contracts.IGenericManager`1.Exists*
+  nameWithType.vb: IGenericManager(Of T).Exists(Integer)
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).Exists(Integer)
+  name.vb: Exists(Integer)
+references:
+- uid: Post.API.Contracts
+  commentId: N:Post.API.Contracts
+  href: Post.html
+  name: Post.API.Contracts
+  nameWithType: Post.API.Contracts
+  fullName: Post.API.Contracts
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.Contracts
+    name: Contracts
+    href: Post.API.Contracts.html
+- uid: Post.API.Contracts.IGenericManager`1.GetAsync*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.GetAsync
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_GetAsync_System_Nullable_System_Int32__
+  name: GetAsync
+  nameWithType: IGenericManager<T>.GetAsync
+  fullName: Post.API.Contracts.IGenericManager<T>.GetAsync
+  nameWithType.vb: IGenericManager(Of T).GetAsync
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).GetAsync
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Threading.Tasks.Task{{T}}
+  commentId: T:System.Threading.Tasks.Task{`0}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<T>
+  nameWithType: Task<T>
+  fullName: System.Threading.Tasks.Task<T>
+  nameWithType.vb: Task(Of T)
+  fullName.vb: System.Threading.Tasks.Task(Of T)
+  name.vb: Task(Of T)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Post.API.Contracts.IGenericManager`1.GetAllAsync*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.GetAllAsync
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_GetAllAsync
+  name: GetAllAsync
+  nameWithType: IGenericManager<T>.GetAllAsync
+  fullName: Post.API.Contracts.IGenericManager<T>.GetAllAsync
+  nameWithType.vb: IGenericManager(Of T).GetAllAsync
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).GetAllAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{{T}}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{`0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<T>>
+  nameWithType: Task<List<T>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<T>>
+  nameWithType.vb: Task(Of List(Of T))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of T))
+  name.vb: Task(Of List(Of T))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: Post.API.Contracts.IGenericManager`1.AddAsync*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.AddAsync
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_AddAsync__0_
+  name: AddAsync
+  nameWithType: IGenericManager<T>.AddAsync
+  fullName: Post.API.Contracts.IGenericManager<T>.AddAsync
+  nameWithType.vb: IGenericManager(Of T).AddAsync
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).AddAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Post.API.Contracts.IGenericManager`1.DeleteAsync*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.DeleteAsync
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_DeleteAsync_System_Int32_
+  name: DeleteAsync
+  nameWithType: IGenericManager<T>.DeleteAsync
+  fullName: Post.API.Contracts.IGenericManager<T>.DeleteAsync
+  nameWithType.vb: IGenericManager(Of T).DeleteAsync
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).DeleteAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Post.API.Contracts.IGenericManager`1.UpdateAsync*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.UpdateAsync
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_UpdateAsync__0_
+  name: UpdateAsync
+  nameWithType: IGenericManager<T>.UpdateAsync
+  fullName: Post.API.Contracts.IGenericManager<T>.UpdateAsync
+  nameWithType.vb: IGenericManager(Of T).UpdateAsync
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).UpdateAsync
+- uid: Post.API.Contracts.IGenericManager`1.Exists*
+  commentId: Overload:Post.API.Contracts.IGenericManager`1.Exists
+  href: Post.API.Contracts.IGenericManager-1.html#Post_API_Contracts_IGenericManager_1_Exists_System_Int32_
+  name: Exists
+  nameWithType: IGenericManager<T>.Exists
+  fullName: Post.API.Contracts.IGenericManager<T>.Exists
+  nameWithType.vb: IGenericManager(Of T).Exists
+  fullName.vb: Post.API.Contracts.IGenericManager(Of T).Exists
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )

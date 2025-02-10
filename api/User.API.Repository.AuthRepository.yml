@@ -1,0 +1,967 @@
+### YamlMime:ManagedReference
+items:
+- uid: User.API.Repository.AuthRepository
+  commentId: T:User.API.Repository.AuthRepository
+  id: AuthRepository
+  parent: User.API.Repository
+  children:
+  - User.API.Repository.AuthRepository.#ctor(Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi},AutoMapper.IMapper,Microsoft.Extensions.Configuration.IConfiguration)
+  - User.API.Repository.AuthRepository.Login(User.API.ModelDtos.AuthDto)
+  - User.API.Repository.AuthRepository.RefreshToken(System.String)
+  - User.API.Repository.AuthRepository.Register(User.API.ModelDtos.RegisterDto)
+  langs:
+  - csharp
+  - vb
+  name: AuthRepository
+  nameWithType: AuthRepository
+  fullName: User.API.Repository.AuthRepository
+  type: Class
+  source:
+    remote:
+      path: User.API/Repository/AuthRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: AuthRepository
+    path: User.API/Repository/AuthRepository.cs
+    startLine: 16
+  assemblies:
+  - User.API
+  namespace: User.API.Repository
+  summary: Repository for handling authentication operations.
+  example: []
+  syntax:
+    content: 'public class AuthRepository : IAuthManager'
+    content.vb: Public Class AuthRepository Implements IAuthManager
+  inheritance:
+  - System.Object
+  implements:
+  - User.API.Contracts.IAuthManager
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: User.API.Repository.AuthRepository.#ctor(Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi},AutoMapper.IMapper,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:User.API.Repository.AuthRepository.#ctor(Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi},AutoMapper.IMapper,Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi},AutoMapper.IMapper,Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: User.API.Repository.AuthRepository
+  langs:
+  - csharp
+  - vb
+  name: AuthRepository(UserManager<UserApi>, IMapper, IConfiguration)
+  nameWithType: AuthRepository.AuthRepository(UserManager<UserApi>, IMapper, IConfiguration)
+  fullName: User.API.Repository.AuthRepository.AuthRepository(Microsoft.AspNetCore.Identity.UserManager<User.API.Data.UserApi>, AutoMapper.IMapper, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: User.API/Repository/AuthRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: .ctor
+    path: User.API/Repository/AuthRepository.cs
+    startLine: 22
+  assemblies:
+  - User.API
+  namespace: User.API.Repository
+  syntax:
+    content: public AuthRepository(UserManager<UserApi> userManager, IMapper mapper, IConfiguration configuration)
+    parameters:
+    - id: userManager
+      type: Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi}
+    - id: mapper
+      type: AutoMapper.IMapper
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public Sub New(userManager As UserManager(Of UserApi), mapper As IMapper, configuration As IConfiguration)
+  overload: User.API.Repository.AuthRepository.#ctor*
+  nameWithType.vb: AuthRepository.New(UserManager(Of UserApi), IMapper, IConfiguration)
+  fullName.vb: User.API.Repository.AuthRepository.New(Microsoft.AspNetCore.Identity.UserManager(Of User.API.Data.UserApi), AutoMapper.IMapper, Microsoft.Extensions.Configuration.IConfiguration)
+  name.vb: New(UserManager(Of UserApi), IMapper, IConfiguration)
+- uid: User.API.Repository.AuthRepository.Register(User.API.ModelDtos.RegisterDto)
+  commentId: M:User.API.Repository.AuthRepository.Register(User.API.ModelDtos.RegisterDto)
+  id: Register(User.API.ModelDtos.RegisterDto)
+  parent: User.API.Repository.AuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Register(RegisterDto)
+  nameWithType: AuthRepository.Register(RegisterDto)
+  fullName: User.API.Repository.AuthRepository.Register(User.API.ModelDtos.RegisterDto)
+  type: Method
+  source:
+    remote:
+      path: User.API/Repository/AuthRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Register
+    path: User.API/Repository/AuthRepository.cs
+    startLine: 39
+  assemblies:
+  - User.API
+  namespace: User.API.Repository
+  summary: Registers a new user.
+  example: []
+  syntax:
+    content: public Task<IEnumerable<IdentityError>> Register(RegisterDto registerDto)
+    parameters:
+    - id: registerDto
+      type: User.API.ModelDtos.RegisterDto
+      description: The registration details.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+      description: A list of identity errors, if any.
+    content.vb: Public Function Register(registerDto As RegisterDto) As Task(Of IEnumerable(Of IdentityError))
+  overload: User.API.Repository.AuthRepository.Register*
+  implements:
+  - User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+- uid: User.API.Repository.AuthRepository.Login(User.API.ModelDtos.AuthDto)
+  commentId: M:User.API.Repository.AuthRepository.Login(User.API.ModelDtos.AuthDto)
+  id: Login(User.API.ModelDtos.AuthDto)
+  parent: User.API.Repository.AuthRepository
+  langs:
+  - csharp
+  - vb
+  name: Login(AuthDto)
+  nameWithType: AuthRepository.Login(AuthDto)
+  fullName: User.API.Repository.AuthRepository.Login(User.API.ModelDtos.AuthDto)
+  type: Method
+  source:
+    remote:
+      path: User.API/Repository/AuthRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: Login
+    path: User.API/Repository/AuthRepository.cs
+    startLine: 97
+  assemblies:
+  - User.API
+  namespace: User.API.Repository
+  summary: Logs in a user and generates a JWT token.
+  example: []
+  syntax:
+    content: public Task<AuthResponseDto> Login(AuthDto loginDto)
+    parameters:
+    - id: loginDto
+      type: User.API.ModelDtos.AuthDto
+      description: The login details.
+    return:
+      type: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+      description: The authentication response with a token.
+    content.vb: Public Function Login(loginDto As AuthDto) As Task(Of AuthResponseDto)
+  overload: User.API.Repository.AuthRepository.Login*
+  implements:
+  - User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+- uid: User.API.Repository.AuthRepository.RefreshToken(System.String)
+  commentId: M:User.API.Repository.AuthRepository.RefreshToken(System.String)
+  id: RefreshToken(System.String)
+  parent: User.API.Repository.AuthRepository
+  langs:
+  - csharp
+  - vb
+  name: RefreshToken(string)
+  nameWithType: AuthRepository.RefreshToken(string)
+  fullName: User.API.Repository.AuthRepository.RefreshToken(string)
+  type: Method
+  source:
+    remote:
+      path: User.API/Repository/AuthRepository.cs
+      branch: main
+      repo: https://github.com/fz3hra/dotnet_blog_post_manager.git
+    id: RefreshToken
+    path: User.API/Repository/AuthRepository.cs
+    startLine: 199
+  assemblies:
+  - User.API
+  namespace: User.API.Repository
+  summary: Refreshes a token (not implemented).
+  example: []
+  syntax:
+    content: public Task<AuthResponseDto> RefreshToken(string refreshToken)
+    parameters:
+    - id: refreshToken
+      type: System.String
+      description: The refresh token.
+    return:
+      type: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+      description: A refreshed authentication token.
+    content.vb: Public Function RefreshToken(refreshToken As String) As Task(Of AuthResponseDto)
+  overload: User.API.Repository.AuthRepository.RefreshToken*
+  implements:
+  - User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  nameWithType.vb: AuthRepository.RefreshToken(String)
+  fullName.vb: User.API.Repository.AuthRepository.RefreshToken(String)
+  name.vb: RefreshToken(String)
+references:
+- uid: User.API.Repository
+  commentId: N:User.API.Repository
+  href: User.html
+  name: User.API.Repository
+  nameWithType: User.API.Repository
+  fullName: User.API.Repository
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Repository
+    name: Repository
+    href: User.API.Repository.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Repository
+    name: Repository
+    href: User.API.Repository.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: User.API.Contracts.IAuthManager
+  commentId: T:User.API.Contracts.IAuthManager
+  parent: User.API.Contracts
+  href: User.API.Contracts.IAuthManager.html
+  name: IAuthManager
+  nameWithType: IAuthManager
+  fullName: User.API.Contracts.IAuthManager
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: User.API.Contracts
+  commentId: N:User.API.Contracts
+  href: User.html
+  name: User.API.Contracts
+  nameWithType: User.API.Contracts
+  fullName: User.API.Contracts
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.Contracts
+    name: Contracts
+    href: User.API.Contracts.html
+- uid: User.API.Repository.AuthRepository.#ctor*
+  commentId: Overload:User.API.Repository.AuthRepository.#ctor
+  href: User.API.Repository.AuthRepository.html#User_API_Repository_AuthRepository__ctor_Microsoft_AspNetCore_Identity_UserManager_User_API_Data_UserApi__AutoMapper_IMapper_Microsoft_Extensions_Configuration_IConfiguration_
+  name: AuthRepository
+  nameWithType: AuthRepository.AuthRepository
+  fullName: User.API.Repository.AuthRepository.AuthRepository
+  nameWithType.vb: AuthRepository.New
+  fullName.vb: User.API.Repository.AuthRepository.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi}
+  commentId: T:Microsoft.AspNetCore.Identity.UserManager{User.API.Data.UserApi}
+  parent: Microsoft.AspNetCore.Identity
+  definition: Microsoft.AspNetCore.Identity.UserManager`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  name: UserManager<UserApi>
+  nameWithType: UserManager<UserApi>
+  fullName: Microsoft.AspNetCore.Identity.UserManager<User.API.Data.UserApi>
+  nameWithType.vb: UserManager(Of UserApi)
+  fullName.vb: Microsoft.AspNetCore.Identity.UserManager(Of User.API.Data.UserApi)
+  name.vb: UserManager(Of UserApi)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: <
+  - uid: User.API.Data.UserApi
+    name: UserApi
+    href: User.API.Data.UserApi.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: User.API.Data.UserApi
+    name: UserApi
+    href: User.API.Data.UserApi.html
+  - name: )
+- uid: AutoMapper.IMapper
+  commentId: T:AutoMapper.IMapper
+  parent: AutoMapper
+  isExternal: true
+  name: IMapper
+  nameWithType: IMapper
+  fullName: AutoMapper.IMapper
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.AspNetCore.Identity.UserManager`1
+  commentId: T:Microsoft.AspNetCore.Identity.UserManager`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  name: UserManager<TUser>
+  nameWithType: UserManager<TUser>
+  fullName: Microsoft.AspNetCore.Identity.UserManager<TUser>
+  nameWithType.vb: UserManager(Of TUser)
+  fullName.vb: Microsoft.AspNetCore.Identity.UserManager(Of TUser)
+  name.vb: UserManager(Of TUser)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: <
+  - name: TUser
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Identity.UserManager`1
+    name: UserManager
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.usermanager-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TUser
+  - name: )
+- uid: Microsoft.AspNetCore.Identity
+  commentId: N:Microsoft.AspNetCore.Identity
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Identity
+  nameWithType: Microsoft.AspNetCore.Identity
+  fullName: Microsoft.AspNetCore.Identity
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Identity
+    name: Identity
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Identity
+    name: Identity
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity
+- uid: AutoMapper
+  commentId: N:AutoMapper
+  isExternal: true
+  name: AutoMapper
+  nameWithType: AutoMapper
+  fullName: AutoMapper
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: User.API.Repository.AuthRepository.Register*
+  commentId: Overload:User.API.Repository.AuthRepository.Register
+  href: User.API.Repository.AuthRepository.html#User_API_Repository_AuthRepository_Register_User_API_ModelDtos_RegisterDto_
+  name: Register
+  nameWithType: AuthRepository.Register
+  fullName: User.API.Repository.AuthRepository.Register
+- uid: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  commentId: M:User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  parent: User.API.Contracts.IAuthManager
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Register_User_API_ModelDtos_RegisterDto_
+  name: Register(RegisterDto)
+  nameWithType: IAuthManager.Register(RegisterDto)
+  fullName: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+  spec.csharp:
+  - uid: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+    name: Register
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Register_User_API_ModelDtos_RegisterDto_
+  - name: (
+  - uid: User.API.ModelDtos.RegisterDto
+    name: RegisterDto
+    href: User.API.ModelDtos.RegisterDto.html
+  - name: )
+  spec.vb:
+  - uid: User.API.Contracts.IAuthManager.Register(User.API.ModelDtos.RegisterDto)
+    name: Register
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Register_User_API_ModelDtos_RegisterDto_
+  - name: (
+  - uid: User.API.ModelDtos.RegisterDto
+    name: RegisterDto
+    href: User.API.ModelDtos.RegisterDto.html
+  - name: )
+- uid: User.API.ModelDtos.RegisterDto
+  commentId: T:User.API.ModelDtos.RegisterDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.RegisterDto.html
+  name: RegisterDto
+  nameWithType: RegisterDto
+  fullName: User.API.ModelDtos.RegisterDto
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Identity.IdentityError}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IEnumerable<IdentityError>>
+  nameWithType: Task<IEnumerable<IdentityError>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Microsoft.AspNetCore.Identity.IdentityError>>
+  nameWithType.vb: Task(Of IEnumerable(Of IdentityError))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of Microsoft.AspNetCore.Identity.IdentityError))
+  name.vb: Task(Of IEnumerable(Of IdentityError))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Identity.IdentityError
+    name: IdentityError
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identityerror
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Identity.IdentityError
+    name: IdentityError
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identityerror
+  - name: )
+  - name: )
+- uid: User.API.ModelDtos
+  commentId: N:User.API.ModelDtos
+  href: User.html
+  name: User.API.ModelDtos
+  nameWithType: User.API.ModelDtos
+  fullName: User.API.ModelDtos
+  spec.csharp:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html
+  spec.vb:
+  - uid: User
+    name: User
+    href: User.html
+  - name: .
+  - uid: User.API
+    name: API
+    href: User.API.html
+  - name: .
+  - uid: User.API.ModelDtos
+    name: ModelDtos
+    href: User.API.ModelDtos.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: User.API.Repository.AuthRepository.Login*
+  commentId: Overload:User.API.Repository.AuthRepository.Login
+  href: User.API.Repository.AuthRepository.html#User_API_Repository_AuthRepository_Login_User_API_ModelDtos_AuthDto_
+  name: Login
+  nameWithType: AuthRepository.Login
+  fullName: User.API.Repository.AuthRepository.Login
+- uid: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  commentId: M:User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  parent: User.API.Contracts.IAuthManager
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Login_User_API_ModelDtos_AuthDto_
+  name: Login(AuthDto)
+  nameWithType: IAuthManager.Login(AuthDto)
+  fullName: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+  spec.csharp:
+  - uid: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+    name: Login
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Login_User_API_ModelDtos_AuthDto_
+  - name: (
+  - uid: User.API.ModelDtos.AuthDto
+    name: AuthDto
+    href: User.API.ModelDtos.AuthDto.html
+  - name: )
+  spec.vb:
+  - uid: User.API.Contracts.IAuthManager.Login(User.API.ModelDtos.AuthDto)
+    name: Login
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_Login_User_API_ModelDtos_AuthDto_
+  - name: (
+  - uid: User.API.ModelDtos.AuthDto
+    name: AuthDto
+    href: User.API.ModelDtos.AuthDto.html
+  - name: )
+- uid: User.API.ModelDtos.AuthDto
+  commentId: T:User.API.ModelDtos.AuthDto
+  parent: User.API.ModelDtos
+  href: User.API.ModelDtos.AuthDto.html
+  name: AuthDto
+  nameWithType: AuthDto
+  fullName: User.API.ModelDtos.AuthDto
+- uid: System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+  commentId: T:System.Threading.Tasks.Task{User.API.Data.AuthResponseDto}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AuthResponseDto>
+  nameWithType: Task<AuthResponseDto>
+  fullName: System.Threading.Tasks.Task<User.API.Data.AuthResponseDto>
+  nameWithType.vb: Task(Of AuthResponseDto)
+  fullName.vb: System.Threading.Tasks.Task(Of User.API.Data.AuthResponseDto)
+  name.vb: Task(Of AuthResponseDto)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: User.API.Data.AuthResponseDto
+    name: AuthResponseDto
+    href: User.API.Data.AuthResponseDto.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: User.API.Data.AuthResponseDto
+    name: AuthResponseDto
+    href: User.API.Data.AuthResponseDto.html
+  - name: )
+- uid: User.API.Repository.AuthRepository.RefreshToken*
+  commentId: Overload:User.API.Repository.AuthRepository.RefreshToken
+  href: User.API.Repository.AuthRepository.html#User_API_Repository_AuthRepository_RefreshToken_System_String_
+  name: RefreshToken
+  nameWithType: AuthRepository.RefreshToken
+  fullName: User.API.Repository.AuthRepository.RefreshToken
+- uid: User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  commentId: M:User.API.Contracts.IAuthManager.RefreshToken(System.String)
+  parent: User.API.Contracts.IAuthManager
+  isExternal: true
+  href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_RefreshToken_System_String_
+  name: RefreshToken(string)
+  nameWithType: IAuthManager.RefreshToken(string)
+  fullName: User.API.Contracts.IAuthManager.RefreshToken(string)
+  nameWithType.vb: IAuthManager.RefreshToken(String)
+  fullName.vb: User.API.Contracts.IAuthManager.RefreshToken(String)
+  name.vb: RefreshToken(String)
+  spec.csharp:
+  - uid: User.API.Contracts.IAuthManager.RefreshToken(System.String)
+    name: RefreshToken
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_RefreshToken_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: User.API.Contracts.IAuthManager.RefreshToken(System.String)
+    name: RefreshToken
+    href: User.API.Contracts.IAuthManager.html#User_API_Contracts_IAuthManager_RefreshToken_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

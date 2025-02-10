@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.ModelDtos
+  commentId: N:Post.API.ModelDtos
+  id: Post.API.ModelDtos
+  children:
+  - Post.API.ModelDtos.BasePostDto
+  - Post.API.ModelDtos.BaseResponse
+  - Post.API.ModelDtos.CreatePostDto
+  - Post.API.ModelDtos.GetPostDetailDto
+  - Post.API.ModelDtos.GetPostDto
+  - Post.API.ModelDtos.PostResponse
+  - Post.API.ModelDtos.PostsResponse
+  - Post.API.ModelDtos.UpdatePostDto
+  langs:
+  - csharp
+  - vb
+  name: Post.API.ModelDtos
+  nameWithType: Post.API.ModelDtos
+  fullName: Post.API.ModelDtos
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.ModelDtos.BasePostDto
+  commentId: T:Post.API.ModelDtos.BasePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.BasePostDto.html
+  name: BasePostDto
+  nameWithType: BasePostDto
+  fullName: Post.API.ModelDtos.BasePostDto
+- uid: Post.API.ModelDtos.CreatePostDto
+  commentId: T:Post.API.ModelDtos.CreatePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.CreatePostDto.html
+  name: CreatePostDto
+  nameWithType: CreatePostDto
+  fullName: Post.API.ModelDtos.CreatePostDto
+- uid: Post.API.ModelDtos.GetPostDetailDto
+  commentId: T:Post.API.ModelDtos.GetPostDetailDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.GetPostDetailDto.html
+  name: GetPostDetailDto
+  nameWithType: GetPostDetailDto
+  fullName: Post.API.ModelDtos.GetPostDetailDto
+- uid: Post.API.ModelDtos.GetPostDto
+  commentId: T:Post.API.ModelDtos.GetPostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.GetPostDto.html
+  name: GetPostDto
+  nameWithType: GetPostDto
+  fullName: Post.API.ModelDtos.GetPostDto
+- uid: Post.API.ModelDtos.BaseResponse
+  commentId: T:Post.API.ModelDtos.BaseResponse
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.BaseResponse.html
+  name: BaseResponse
+  nameWithType: BaseResponse
+  fullName: Post.API.ModelDtos.BaseResponse
+- uid: Post.API.ModelDtos.PostResponse
+  commentId: T:Post.API.ModelDtos.PostResponse
+  href: Post.API.ModelDtos.PostResponse.html
+  name: PostResponse
+  nameWithType: PostResponse
+  fullName: Post.API.ModelDtos.PostResponse
+- uid: Post.API.ModelDtos.PostsResponse
+  commentId: T:Post.API.ModelDtos.PostsResponse
+  href: Post.API.ModelDtos.PostsResponse.html
+  name: PostsResponse
+  nameWithType: PostsResponse
+  fullName: Post.API.ModelDtos.PostsResponse
+- uid: Post.API.ModelDtos.UpdatePostDto
+  commentId: T:Post.API.ModelDtos.UpdatePostDto
+  parent: Post.API.ModelDtos
+  href: Post.API.ModelDtos.UpdatePostDto.html
+  name: UpdatePostDto
+  nameWithType: UpdatePostDto
+  fullName: Post.API.ModelDtos.UpdatePostDto
+- uid: Post.API.ModelDtos
+  commentId: N:Post.API.ModelDtos
+  href: Post.html
+  name: Post.API.ModelDtos
+  nameWithType: Post.API.ModelDtos
+  fullName: Post.API.ModelDtos
+  spec.csharp:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html
+  spec.vb:
+  - uid: Post
+    name: Post
+    href: Post.html
+  - name: .
+  - uid: Post.API
+    name: API
+    href: Post.API.html
+  - name: .
+  - uid: Post.API.ModelDtos
+    name: ModelDtos
+    href: Post.API.ModelDtos.html

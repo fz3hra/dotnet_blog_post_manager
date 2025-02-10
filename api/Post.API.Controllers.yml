@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Post.API.Controllers
+  commentId: N:Post.API.Controllers
+  id: Post.API.Controllers
+  children:
+  - Post.API.Controllers.PostController
+  langs:
+  - csharp
+  - vb
+  name: Post.API.Controllers
+  nameWithType: Post.API.Controllers
+  fullName: Post.API.Controllers
+  type: Namespace
+  assemblies:
+  - Post.API
+references:
+- uid: Post.API.Controllers.PostController
+  commentId: T:Post.API.Controllers.PostController
+  href: Post.API.Controllers.PostController.html
+  name: PostController
+  nameWithType: PostController
+  fullName: Post.API.Controllers.PostController
