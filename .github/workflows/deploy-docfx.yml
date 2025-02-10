@@ -29,6 +29,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          external_repository: fz3hra/server_blog_post_manager.io
           publish_branch: gh-pages
           publish_dir: _site
