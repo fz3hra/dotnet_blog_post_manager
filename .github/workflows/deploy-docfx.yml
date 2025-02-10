@@ -29,5 +29,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: fz3hra/server_blog_post_manager.github.io
           publish_branch: gh-pages
           publish_dir: _site

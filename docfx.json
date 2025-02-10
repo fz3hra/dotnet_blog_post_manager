@@ -39,8 +39,7 @@
       "_appName": "back_blog_post_manager",
       "_appTitle": "back_blog_post_manager",
       "_enableSearch": true,
-      "pdf": true,
-      "baseUrl": "https://fz3hra.github.io/dotnet_blog_post_manager/"
+      "pdf": true
     }
   }
 }
