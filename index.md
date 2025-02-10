@@ -5,6 +5,7 @@ _layout: landing
 # Back Blog Post Manager
 
 A scalable microservices-based blog management system built with .NET 8.0.
+****
 
 ## Key Features
 - User authentication and management
