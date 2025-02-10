@@ -28,7 +28,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PUB_KEY }}
+          personal_token: ${{ secrets.PUB_KEY }}
           external_repository: fz3hra/server_blog_post_manager.github.io
           publish_branch: gh-pages
           publish_dir: _site
