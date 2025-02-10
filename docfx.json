@@ -18,8 +18,8 @@
   "build": {
     "content": [
       {
-        "files": ["api/**/*.yml", "*.md", "toc.yml"],
-        "exclude": ["_site/**"]
+        "files": ["api/**/*.yml", "api/index.md", "articles/**/*.md", "toc.yml", "*.md"],
+        "exclude": ["obj/**", "_site/**"]
       }
     ],
     "resource": [
@@ -39,7 +39,8 @@
       "_appName": "back_blog_post_manager",
       "_appTitle": "back_blog_post_manager",
       "_enableSearch": true,
-      "pdf": true
+      "pdf": true,
+      "_baseUrl": "/server_blog_post_manager.github.io"
     }
   }
 }
