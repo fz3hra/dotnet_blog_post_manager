@@ -1,3 +1,6 @@
+Code documentation:
+https://fz3hra.github.io/server_blog_post_manager.github.io/index.html
+
 # Blog Post Manager
 
 The Blog Post Manager is a full-stack application designed to provide comprehensive blog post management capabilities. The system is built using React for the frontend and .NET microservices for the backend, offering a robust and scalable solution for content management.
@@ -128,4 +131,4 @@ dotnet test User.API.Tests
 
 ## Support
 
-For technical support or questions about the implementation, please create an issue in the repository with detailed information about your concern. Include relevant logs and steps to reproduce any issues you encounter.
+# For technical support or questions about the implementation, please create an issue in the repository with detailed information about your concern. Include relevant logs and steps to reproduce any issues you encounter.
