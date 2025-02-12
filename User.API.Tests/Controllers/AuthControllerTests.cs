@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using User.API.Controllers;
 using User.API.Contracts;
@@ -16,11 +17,13 @@ namespace User.API.Tests.Controller
     {
         private readonly Mock<IAuthManager> _mockAuthManager;
         private readonly AuthController _controller;
+        private readonly Mock<IConfiguration> _mockConfiguration;
 
         public AuthControllerTests()
         {
             _mockAuthManager = new Mock<IAuthManager>();
-            _controller = new AuthController(_mockAuthManager.Object);
+            _mockConfiguration = new Mock<IConfiguration>();
+            _controller = new AuthController(_mockAuthManager.Object, _mockConfiguration.Object);
         }
 
         [Fact]
