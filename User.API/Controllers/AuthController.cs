@@ -1,5 +1,10 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
+using Microsoft.IdentityModel.Tokens;
 using User.API.Contracts;
 using User.API.ModelDtos;
 
@@ -13,14 +18,16 @@ namespace User.API.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IAuthManager _authManager;
+    private readonly IConfiguration _configuration;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AuthController"/> class.
     /// </summary>
     /// <param name="authManager">The authentication manager.</param>
-    public AuthController(IAuthManager authManager)
+    public AuthController(IAuthManager authManager, IConfiguration configuration)
     {
         _authManager = authManager;
+        _configuration = configuration;
     }
 
     /// <summary>
@@ -80,5 +87,60 @@ public class AuthController : ControllerBase
         {
             return Unauthorized();
         }
+    }
+
+    [HttpGet("verify")]
+    [Authorize]
+    public async Task<IActionResult> VerifyToken()
+    {
+        try
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            var authHeader = Request.Headers["Authorization"].FirstOrDefault();
+            if (string.IsNullOrEmpty(authHeader) || !authHeader.StartsWith("Bearer "))
+            {
+                return Unauthorized();
+            }
+
+            var token = authHeader.Substring("Bearer ".Length);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_configuration["JwtSettings:Key"]);
+
+            try
+            {
+                tokenHandler.ValidateToken(token, new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidIssuer = _configuration["JwtSettings:Issuer"],
+                    ValidAudience = _configuration["JwtSettings:Audience"],
+                    ClockSkew = TimeSpan.Zero
+                }, out _);
+
+                return Ok(new { valid = true });
+            }
+            catch
+            {
+                return Unauthorized();
+            }
+        }
+        catch
+        {
+            return Unauthorized();
+        }
+    }
+
+    [HttpPost("logout")]
+    [Authorize]
+    public ActionResult Logout()
+    {
+        return Ok(new { message = "Logged out successfully" });
     }
 }

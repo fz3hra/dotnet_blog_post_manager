@@ -125,7 +125,9 @@ public class AuthRepository : IAuthManager
             return new AuthResponseDto
             {
                 UserId = user.Id,
-                Token = token
+                Token = token,
+                UserName = user.UserName,
+                Email = user.Email
             };
         }
         catch (Exception)
